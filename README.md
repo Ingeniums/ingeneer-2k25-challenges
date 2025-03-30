@@ -8,3 +8,14 @@
 - Add category, difficulty, author under `tags` in `challenge.yml`
 - If you are not able to add the `challenge.yml` file, add a `flag.txt` file under `challenge/`
 - Solution should be under `solution/` folder
+# Example
+```bash
+easy-Sample/
+├── solution
+├── challenge.yml
+└── challenge
+    ├── files
+    │   ├── file2.txt
+    │   └── file1.txt
+    └── Dockerfile
+```
