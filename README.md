@@ -1,4 +1,4 @@
-# Guidelines
+# File structure
 - Add your challenge to its corresponding category
 - Create a folder corresponding to the name of your challenge prefixed with difficulty, eg: `easy - [challenge Name]`
 - Include if possible a `challenge.yml` file containing description of your challenge. You can find an example 
