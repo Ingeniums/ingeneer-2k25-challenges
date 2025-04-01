@@ -4,13 +4,14 @@ author: "the1rtist"
 
 category: "Networking"
 
-value: 100
+difficulty: "warmup"
 
-type: "warmup"
+type: "standard"
 
 description: >
   A magical artifact hides in plain sight among Hogwarts' network devices.
   The secret lies not in spells or runes, but in what the device itself reveals.
+  Note: enable is protected by a password, you can acces to your view by typing: "enable view participant" the password is "SuperStrongPassword". 
 
 hint: >
   "Interfaces speak when properly questioned. What do their mundane details whisper?"

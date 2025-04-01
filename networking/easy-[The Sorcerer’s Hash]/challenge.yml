@@ -1,0 +1,22 @@
+challenge_name: "The Sorcerer's Hash"
+
+author: "the1rtist"
+
+category: "Networking"
+
+difficulty: "easy"
+
+type: "standard"
+
+description: >
+  Hogwarts Castle is protected by a magical wall, preventing intruders from accessing it.  
+  But a mysterious source has leaked a critical hash with the value:  
+  "9b299d6950f67195e7840cd7a3b51e02415ad5616efdb570a28c51fa21df5bad".  
+  Can you access the castle and retrieve the secret?  
+
+hint: >
+  "Why can't Godric speak with Helga?"
+
+flag: "1ng3neer2k25{F1D3L1US_CH4RM_BYP4SS3D}"
+
+attribution: "Written by the1rtist"
