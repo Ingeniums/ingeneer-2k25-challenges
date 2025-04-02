@@ -1,0 +1,24 @@
+challenge_name: "The Sorting Hat"
+
+author: "the1rtist"
+
+category: "Networking"
+
+difficulty: "easy"
+
+type: "standard"
+
+description: >
+  Deep within Hogwarts' Chamber of Networks everything runs magically.
+  But dark wizards whisper of a way to drain its magic.
+  
+  Discover how the dark wizards accomplish this attack so we can protect the castle's network.
+  Claim your victory with the flag: `1ng3neer2k25{attack_name}`
+
+
+
+flag: "1ng3neer2k25{dhcp_starvation}"
+
+
+
+attribution: "Written by the1rtist"
