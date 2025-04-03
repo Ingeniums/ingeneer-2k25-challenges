@@ -24,7 +24,7 @@ easy-Sample/
 | Author              | Challenges                                           |
 |---------------------|------------------------------------------------------|
 | tarekeee           | Problem Solving                                      |
-| FendiMohamed       | Web(1 easy), DevOps(1 medium, 1 easy)                |
+| poysa213          | Web (1 tough)                                         |
 | DahounManel        | Design                                               |
 | Mountasser         | Design                                               |
 | merzouka          | Web(1 easy, 1 tough), DevOps(1 warmup, 1 easy, 2 medium, 1 hard) |
