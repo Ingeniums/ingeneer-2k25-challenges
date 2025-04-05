@@ -36,5 +36,5 @@ jobs:
         with:
           context: ./devops/warmup-[Capsula Enchanta]
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ingeneer2k25-capsula-enchanta:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/ingeneer2k25-capsula-enchanta:${{ github.sha }}, ${{ secrets.DOCKERHUB_USERNAME }}/ingeneer2k25-capsula-enchanta:latest
       
