@@ -37,5 +37,5 @@ jobs:
         with:
           context: ./devops/warmup-[Capsula Enchanta]
           push: true
-          tags: ${{ env.REGISTRY }}/ingeniums/capsula-enchanta:${{ github.sha }}
+          tags: ${{ env.REGISTRY }}/ingeniums/ingeneer2k25-capsula-enchanta:${{ github.sha }}
       
