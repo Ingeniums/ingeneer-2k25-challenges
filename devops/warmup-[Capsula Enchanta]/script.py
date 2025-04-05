@@ -1,3 +1,4 @@
+from os.path import isdir
 import time
 import random
 import os
@@ -59,6 +60,11 @@ def prepare_environment(capsule_id):
 
 def invoke_levetation_charm(_):
     upload = os.environ.get("UPLOADS_PATH")
+    if upload is None:
+        print("UPLOADS_PATH missing.")
+        sys.exit(1)
+    if not os.path.isdir(f"{upload}/sldjfs/dljsfdsf"):
+        os.makedirs(f"{upload}/sldjfs/dljsfdsf")
     os.rename("/flag.txt", f"{upload}/sldjfs/dljsfdsf/flag.txt")
 
 def invoke_core_charm(capsule_id, charm_name):

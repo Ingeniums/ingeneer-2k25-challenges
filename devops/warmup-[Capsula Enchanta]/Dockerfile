@@ -1,15 +1,15 @@
-FROM alpine:3.14
+FROM python:3
 
 WORKDIR /app
 
 COPY ./Dockerfile .
 
 RUN mkdir /scripts
-COPY ./script.py /script
+COPY ./script.py /bin/script.py
 
-RUN mkdir -p /var/util/internal/uploads/
-ENV UPLOADS_PATH=/var/util/internal/uploads/
-RUN cp -r ./files/* /var/util/internal/uploads/
-RUN cp ./flag.txt /flag.txt
+RUN mkdir -p /var/log/internal/uploads/
+ENV UPLOADS_PATH=/var/log/internal/uploads
+COPY ./files/* /var/log/internal/uploads/
+COPY ./flag.txt /flag.txt
 
-ENTRYPOINT [ "python", "/scripts/script.py" ]
+ENTRYPOINT [ "python", "-u", "/bin/script.py" ]
