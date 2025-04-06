@@ -1,7 +1,7 @@
-name: "name"
+name: "{{name}}"
 # there is no way to display the name in the template so add name to tags
-author: "author"
-category: category # web, reverse, crypto, design, networking, ai, devops, problem solving
+author: "{{author}}"
+category: {{category}} # web, reverse, crypto, design, networking, ai, devops, problem solving
 description: |
   This is a sample description, 
   with multiple lines
@@ -49,9 +49,9 @@ topics:
 
 # difficulty, author, category, may be other things you see fit
 tags:
-    - web
-    - sandbox
-    - js
+    - {{difficulty}}
+    - {{author}}
+    - {{category}}
 
 # Provide paths to files from the same directory that this file is in
 files:

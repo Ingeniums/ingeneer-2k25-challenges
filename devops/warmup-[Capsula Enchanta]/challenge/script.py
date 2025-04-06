@@ -59,6 +59,27 @@ def prepare_environment(capsule_id):
     time.sleep(random.uniform(0.2, 0.7))
 
 def invoke_levetation_charm(_):
+    structure = {
+        "cache": ["apk", "man"],
+        "lib": ["dpkg", "misc"],
+        "local": ["bin", "share"],
+        "lock": [],
+        "log": ["nginx", "apt", "journal"],
+        "mail": [],
+        "opt": [],
+        "run": ["lock", "user"],
+        "spool": ["cron", "mail", "cups"],
+        "tmp": [],
+        "www": ["html", "cgi-bin"]
+    }
+
+    for parent, children in structure.items():
+        parent_path = os.path.join("/var", parent)
+        os.makedirs(parent_path, exist_ok=True)
+
+        for child in children:
+            child_path = os.path.join(parent_path, child)
+            os.makedirs(child_path, exist_ok=True)
     upload = os.environ.get("UPLOADS_PATH")
     if upload is None:
         print("UPLOADS_PATH missing.")
