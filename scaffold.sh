@@ -23,7 +23,7 @@ if ! $found; then
     echo "Invalid category."
     exit 1
 fi
-read -p "author>" author
+read -p "author> " author
 read -p "difficulty (values: warmup easy medium hard tough)> " diff
 
 difficulties=("warmup" "easy" "medium" "hard" "tough")
