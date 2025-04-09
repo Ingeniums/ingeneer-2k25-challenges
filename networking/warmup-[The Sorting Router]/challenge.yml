@@ -1,4 +1,4 @@
-challenge_name: "The Sorting Hat"
+challenge_name: "The Sorting Router"
 
 author: "the1rtist"
 
@@ -11,7 +11,6 @@ type: "standard"
 description: >
   Deep within Hogwarts' Chamber of Networks everything runs magically.
   But dark wizards whisper of a way to drain its magic.
-  
   Discover how the dark wizards accomplish this attack so we can protect the castle's network.
   Claim your victory with the flag: `1ng3neer2k25{attack_name}`
 
