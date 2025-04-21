@@ -1,0 +1,229 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hogwarts Room of Requirement</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background-color: #2a2d34;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%233b3f4b" d="M20 20h60v60H20z" opacity="0.1"/><path fill="%23343840" d="M50 20h30v30H50z" opacity="0.2"/><path fill="%233f4450" d="M20 50h30v30H20z" opacity="0.2"/></svg>');
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: rgba(38, 40, 49, 0.9);
+            border-bottom: 2px solid #bf9b30;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title-area {
+            display: flex;
+            align-items: center;
+        }
+        .wand-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #bf9b30;
+        }
+        h1 {
+            color: #bf9b30;
+            margin: 0;
+            font-size: 24px;
+        }
+        .user-info {
+            text-align: right;
+        }
+        .user-info a {
+            color: #bf9b30;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+        .user-info a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .intro h2 {
+            color: #bf9b30;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .intro p {
+            color: #a8a8a8;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .editor-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .editor-box {
+            flex: 1;
+            background-color: rgba(38, 40, 49, 0.9);
+            border: 2px solid #bf9b30;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .editor-box h3 {
+            color: #bf9b30;
+            margin-top: 0;
+            border-bottom: 1px solid #5d5d5d;
+            padding-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            background-color: #1c1e22;
+            color: #e0e0e0;
+            border: 1px solid #5d5d5d;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: monospace;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #bf9b30;
+        }
+        button {
+            background: linear-gradient(135deg, #bf9b30 0%, #8e6f17 100%);
+            color: #1c1e22;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            font-family: 'Garamond', serif;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #d4b04e 0%, #bf9b30 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .output {
+            background-color: #1c1e22;
+            border: 1px solid #5d5d5d;
+            border-radius: 4px;
+            padding: 15px;
+            min-height: 300px;
+            overflow: auto;
+            margin-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #8a8a8a;
+            border-top: 1px solid #5d5d5d;
+        }
+        .spell-examples {
+            margin-top: 30px;
+            background-color: rgba(38, 40, 49, 0.7);
+            border-left: 4px solid #bf9b30;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .spell-examples h4 {
+            color: #bf9b30;
+            margin-top: 0;
+        }
+        .spell-examples pre {
+            background-color: #1c1e22;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            color: #a8a8a8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title-area">
+            <span class="wand-icon">⚡</span>
+            <h1>Room of Requirement</h1>
+        </div>
+        <div class="user-info">
+            {% if session.get('username') %}
+                Wizard: <span style="color: #bf9b30; font-weight: bold;">{{ session.get('username') }}</span>
+                {% if session.get('is_admin') %}
+                    <span style="color: #d4b04e;">(Headmaster)</span>
+                {% endif %}
+            {% else %}
+                <a href="{{ url_for('login') }}">Enter Portal</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Welcome to the Room of Requirement</h2>
+            <p>Here you can test your magical code incantations. The Room of Requirement reveals whatever you need it to. Write your spells on the left, and see the results on the right.</p>
+        </div>
+        
+        <div class="editor-container">
+            <div class="editor-box">
+                <h3>Write Your Spell</h3>
+                <textarea id="htmlInput" placeholder="Enter your HTML incantation here..."></textarea>
+                <button onclick="renderHTML()">Cast Spell</button>
+                
+                <div class="spell-examples">
+                    <h4>Sample Incantations</h4>
+                    <pre>&lt;h1&gt;Lumos Maxima!&lt;/h1&gt;
+&lt;p&gt;The Room of Requirement has revealed your magic.&lt;/p&gt;</pre>
+                </div>
+            </div>
+            
+            <div class="editor-box">
+                <h3>Magical Results</h3>
+                <div id="output" class="output">
+                    <p style="color: #8a8a8a; text-align: center;">Your spell results will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>"Mischief managed."</p>
+    </div>
+    
+    <script>
+        function renderHTML() {
+            const html = document.getElementById('htmlInput').value;
+            
+            fetch('/render', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ html: html })
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('output').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('output').innerHTML = '<p style="color: #ff4c4c;">Your spell has backfired!</p>';
+            });
+        }
+    </script>
+</body>
+</html>

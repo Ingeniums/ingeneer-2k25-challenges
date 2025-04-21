@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head Curator - Ministry of Magic Archives</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #1a1a1a;
+            color: #d4af37;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1606509036992-4e9cdbca9bea?q=80&w=1500');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #d4af37;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #d4af37;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #d4af37;
+        }
+        
+        .ministry-seal {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 3em;
+            color: #d4af37;
+        }
+        
+        .form-container {
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .scroll {
+            background-color: #f7f2e4;
+            color: #4a3822;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            position: relative;
+            border: 1px solid #a88c53;
+        }
+        
+        .scroll:before, .scroll:after {
+            content: "";
+            height: 10px;
+            background-color: #a88c53;
+            border-radius: 5px;
+            display: block;
+            margin: -20px -20px 20px -20px;
+        }
+        
+        .scroll:after {
+            margin: 20px -20px -20px -20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        input[type="file"] {
+            background-color: #2a2a2a;
+            color: #d4af37;
+            padding: 10px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background-color: #d4af37;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background-color: #1a1a1a;
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #a88c53;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ministry of Magic</h1>
+        <h2>Department of Magical Artifacts</h2>
+        
+        <div class="ministry-seal">⚜</div>
+        
+        <div class="scroll">
+            <p><strong>OFFICIAL MINISTRY NOTICE:</strong></p>
+            <p>As the newly appointed Head Curator of the Department of Magical Artifacts, you are responsible for cataloging and inventorying all magical items submitted to the Ministry's treasury.</p>
+            <p>Please upload your item descriptions in the approved YAML format. All items will be inspected by the Department of Magical Law Enforcement before being added to the official registry.</p>
+            <p><em>Failure to properly document magical items is punishable under Wizarding Law, Section 13, Paragraph 5.</em></p>
+            <p style="text-align: right;"><strong>— Hermione Granger</strong><br>Minister for Magic</p>
+        </div>
+        
+        <div class="form-container">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="item_yaml">Upload Magical Item Description (YAML format):</label>
+                <input type="file" id="item_yaml" name="item_yaml" accept=".yaml,.yml" required>
+                <button type="submit">Submit to Ministry Archives</button>
+            </form>
+        </div>
+        
+        <footer>
+            <p>© Ministry of Magic, 1707-2025<br>
+            Unauthorized use of Ministry systems is punishable by imprisonment in Azkaban</p>
+        </footer>
+    </div>
+</body>
+</html>

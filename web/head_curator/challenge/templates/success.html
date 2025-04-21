@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Registered - Ministry of Magic Archives</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #1a1a1a;
+            color: #d4af37;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1585951237318-9ea5e175b891?q=80&w=1500');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            margin-top: 50px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #d4af37;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #d4af37;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #d4af37;
+        }
+        
+        .success-icon {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 5em;
+            color: #2e7d32;
+            text-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+        }
+        
+        .ministry-seal {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 3em;
+            color: #d4af37;
+        }
+        
+        .parchment {
+            background-color: #f7f2e4;
+            color: #4a3822;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            position: relative;
+            border: 1px solid #a88c53;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .parchment:before, .parchment:after {
+            content: "";
+            height: 10px;
+            background-color: #a88c53;
+            border-radius: 5px;
+            display: block;
+            margin: -20px -20px 20px -20px;
+        }
+        
+        .parchment:after {
+            margin: 20px -20px -20px -20px;
+        }
+        
+        .stamp {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #6d4c41;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(15deg);
+            color: #6d4c41;
+            font-weight: bold;
+            font-size: 0.7em;
+            line-height: 1.2;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        .back-button {
+            background-color: #d4af37;
+            color: #1a1a1a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            margin: 30px auto;
+            text-decoration: none;
+            text-align: center;
+            width: 200px;
+            transition: all 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #1a1a1a;
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #a88c53;
+        }
+        
+        .magical-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.2;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.4) 0%, transparent 20%),
+                radial-gradient(circle at 80% 30%, rgba(212, 175, 55, 0.4) 0%, transparent 20%),
+                radial-gradient(circle at 40% 70%, rgba(212, 175, 55, 0.4) 0%, transparent 20%),
+                radial-gradient(circle at 70% 90%, rgba(212, 175, 55, 0.4) 0%, transparent 20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="magical-effect"></div>
+    
+    <div class="container">
+        <h1>Ministry of Magic</h1>
+        <h2>Department of Magical Artifacts</h2>
+        
+        <div class="ministry-seal">⚜</div>
+        
+        <div class="success-icon">✓</div>
+        
+        <div class="parchment">
+            <h3 style="text-align: center; color: #6d4c41;">CERTIFICATE OF MAGICAL ITEM REGISTRY</h3>
+            <p>This document certifies that a magical item has been successfully submitted to the Ministry's archives and treasury.</p>
+            <p>The item has been cataloged and assigned a unique identifier in accordance with the International Confederation of Wizards' Treaty on Magical Artifacts (Section VII).</p>
+            <p>A copy of this registry has been sent to the Department of Magical Law Enforcement for routine inspection.</p>
+            <p style="margin-top: 30px;"><strong>Date of Registration:</strong> <span id="current-date">April 21, 2025</span></p>
+            <p><strong>Registry Official:</strong> Head Curator</p>
+            <div class="stamp">
+                OFFICIALLY<br>REGISTERED<br>MINISTRY<br>OF MAGIC
+            </div>
+        </div>
+        
+        <a href="/" class="back-button">Register Another Item</a>
+        
+        <footer>
+            <p>© Ministry of Magic, 1707-2025<br>
+            Unauthorized use of Ministry systems is punishable by imprisonment in Azkaban</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Display the current date on the certificate
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+        });
+    </script>
+</body>
+</html>

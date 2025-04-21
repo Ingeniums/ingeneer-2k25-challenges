@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book_name }} - Forbidden Archives</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #0a0a13;
+            color: #d4af37;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+            /* Dark library background effect */
+            background: linear-gradient(rgba(5, 5, 10, 0.97), rgba(5, 5, 10, 0.97)),
+                        repeating-linear-gradient(45deg, #111 0px, #111 2px, #0a0a13 2px, #0a0a13 4px);
+        }
+        .book-container {
+            width: 80%;
+            max-width: 900px;
+            background-color: rgba(10, 10, 19, 0.9);
+            border: 6px solid #5d4037;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.8);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            
+            /* Old parchment effect */
+            background-image: 
+                linear-gradient(rgba(10, 10, 19, 0.93), rgba(10, 10, 19, 0.93)),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .book-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            color: #8b0000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+        .book-subtitle {
+            font-style: italic;
+            color: #ffd700;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .book-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #d4af37;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            column-count: 2;
+            column-gap: 40px;
+            text-align: justify;
+        }
+        .warning-seal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #5d0000 30%, transparent 31%), 
+                        repeating-conic-gradient(from 0deg, #5d0000 0%, #8b0000 5%, #5d0000 10%);
+            border: 2px solid #d4af37;
+            box-shadow: 0px 0px 15px rgba(139, 0, 0, 0.7);
+        }
+        .warning-seal::before {
+            content: "M";
+            font-family: 'Cinzel', serif;
+            font-size: 26px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        .warning-seal::after {
+            content: "• MINISTRY •";
+            font-family: 'Cinzel', serif;
+            font-size: 8px;
+            color: #d4af37;
+            margin-top: 3px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #5d4037;
+            color: #ffd700;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid #8b0000;
+        }
+        .back-button:hover {
+            background-color: #8b0000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
+        .magical-symbols {
+            position: absolute;
+            color: rgba(212, 175, 55, 0.1);
+            z-index: -1;
+            font-size: 100px;
+        }
+        .symbol1 {
+            top: 50px;
+            left: 50px;
+            transform: rotate(30deg);
+        }
+        .symbol2 {
+            bottom: 100px;
+            right: 80px;
+            transform: rotate(-15deg);
+        }
+
+        /* Different styles based on book type */
+        .book-necronomicon {
+            border-color: #5d0000;
+        }
+        .book-necronomicon h1 {
+            color: #5d0000;
+        }
+        
+        .book-grimoire {
+            border-color: #1a472a;
+        }
+        .book-grimoire h1 {
+            color: #1a6b2a;
+        }
+        
+        .book-shadows {
+            border-color: #00008b;
+        }
+        .book-shadows h1 {
+            color: #00008b;
+        }
+        
+        .book-secrets {
+            border-color: #1a472a;
+        }
+        .book-secrets h1 {
+            color: #2a623d;
+        }
+        
+        @media (max-width: 768px) {
+            .book-content {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container book-{{ book_id }}">
+        <div class="magical-symbols symbol1">☽</div>
+        <div class="magical-symbols symbol2">⍟</div>
+        
+        <div class="book-header">
+            <h1>{{ book_name }}</h1>
+            <div class="book-subtitle">Ancient Forbidden Knowledge of the Darkest Magic</div>
+            <div class="warning-seal"></div>
+        </div>
+        
+        <div class="book-content">
+            {{ content|safe }}
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/" class="back-button">Return to Archives</a>
+        </div>
+    </div>
+</body>
+</html>

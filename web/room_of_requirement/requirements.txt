@@ -1,0 +1,2 @@
+flask
+Jinja2==3.1.5
