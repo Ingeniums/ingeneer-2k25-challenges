@@ -1,0 +1,20 @@
+challenge_name: "Break_a_rule"
+
+author: "th31rtist"
+
+category: "Networking"
+
+difficulty: "hard"
+
+type: "standard"
+
+description: >
+  You are in PC1(you use linux btw), what's one command you could type to talk to the other pc who has ip address 192.168.1.12 despite the barrier?
+
+hint: ""
+
+flag: "1ng3neer2k25{r0ut3rs_sh0uldnt_b3_th1t_h3lpful}"
+
+
+
+attribution: "Written by th31rtist"
