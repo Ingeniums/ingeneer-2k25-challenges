@@ -1,0 +1,34 @@
+name: "Snape's Document"
+
+author: "{sirmoncef}"
+category: forensics 
+description: A mysterious scroll was recovered from the depths of the Restricted Section. Its contents appear harmless, but something is clearly hidden beneath the surface. A strange pattern keeps repeating... can you unveil the secret Snape left behind? #45hmtyhjklm
+
+# can be omitted
+attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)
+
+value: 500
+
+type: standard
+
+
+flags:
+   
+    - 1ng3neer2k25{n0w_u_kn0w_m4cr0000_c0ngr4ts!}
+   
+
+tags:
+    - Medium
+    - "{sirmoncef}"
+    - forensics
+    
+
+
+files:
+    - files/*
+
+
+state: hidden
+
+
+version: "0.1"

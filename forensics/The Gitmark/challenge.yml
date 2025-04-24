@@ -1,0 +1,34 @@
+name: "The Gitmark"
+
+author: "{sirmoncef}"
+category: forensics 
+description: You Know What To DO . when u find the piece put it in 1ng3neer2k25{}
+
+# can be omitted
+attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)
+
+value: 500
+
+type: standard
+
+
+flags:
+   
+    - 1ng3neer2k25{wolfwizard}
+   
+
+tags:
+    - Medium
+    - "{sirmoncef}"
+    - forensics
+    - git
+
+
+files:
+    - files/*
+
+
+state: hidden
+
+
+version: "0.1"

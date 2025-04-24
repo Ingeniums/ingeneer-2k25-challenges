@@ -1,0 +1,33 @@
+name: "The Forbidden Packet"
+
+author: "{sirmoncef}"
+category: forensics 
+description: The Ministry has intercepted suspicious network traffic near Hogwarts. Rumor has it that someone is trying to smuggle secrets out of the castle using dark digital arts. Your task is to analyze the pcap file and uncover the secret chunks
+
+# can be omitted
+attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)
+
+value: 500
+
+type: standard
+
+
+flags:
+   
+    - 1ng3neer2k25{Gg_H4ck3r_Y0u_G0t_7h3_3xf1ltrati0n_spell}
+   
+
+tags:
+    - easy
+    - "{sirmoncef}"
+    - forensics
+
+
+files:
+    - files/*
+
+
+state: hidden
+
+
+version: "0.1"
