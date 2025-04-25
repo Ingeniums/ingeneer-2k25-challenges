@@ -28,6 +28,13 @@ func response(w http.ResponseWriter, status int, body any) int {
     w.WriteHeader(status)
     return status
 }
+type Step struct {
+    Name string
+    Dependencies []string
+}
+
+var Steps []Step = []Step{
+}
 
 func main() {
     req := []string{"val1", "val2", "val3"}
