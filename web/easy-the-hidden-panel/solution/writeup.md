@@ -1,0 +1,8 @@
+- find the fake flag 
+- find your ip 172.99.0.3
+- ping other addresses (you will find .2 up)
+- the webservice is .2 (whats the port for web apps ? 80 )
+- how to access it ? no commands that lets you do it 
+- tunnel your way into it
+- create an ssh tunnel to the web app `ssh -o IdentitiesOnly=yes -o PreferredAuthentications=password  -L 8080:172.99.0.2:80 ctfplayer@host -p 2222` 
+- you will find the flag at /flag
