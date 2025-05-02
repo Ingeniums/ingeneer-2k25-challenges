@@ -1,0 +1,30 @@
+name: "The Hidden Panel"
+author: "ilyes_haddad_"
+category: web 
+description: |
+    You’ve been granted temporary access to a secure Hogwarts server — a curious artifact buried deep within the castle’s enchanted network. When you log in, things seem… mundane. Nothing but a dusty scroll and a few harmless incantations allowed.
+    But legends whisper of a hidden chamber — a place that only reveals itself to those who truly need it.
+    Rumors among the Order say that some clever wizards thinking outside the box have tunneled their way through forgotten paths, exposing secrets never meant for Muggle eyes. If such a place does exist… you may need to bend the rules of magic to uncover it.
+    The true flag lies not in what you can see, but in what you're willing to reveal.
+    "Dobby knows of such a room, sir... A Room that appears when one is in great need... and it hides itself well."attribution: Written by [ilyes_haddad_](https://ilyeshaddad.com/)
+value: {{difficulty}}
+type: standard
+protocol: null
+connection_info: ssh -o IdentitiesOnly=yes -o PreferredAuthentications=password ctfplayer@{{host}} -p {{port}}
+
+flags:
+    - {
+        type: "static",
+        content: "1ng3neer2k25{ssh_tunn3ll1ng_is_4w3s0me}",
+    }  
+
+tags:
+    - Easy
+    - ilyes_haddad_
+    - web
+
+
+files:
+    - challenge/*
+state: hidden
+version: "0.1"
