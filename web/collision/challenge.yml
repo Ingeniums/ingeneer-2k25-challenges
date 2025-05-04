@@ -1,34 +1,16 @@
 name: "Collision"
-
 author: "{sirmoncef}"
-category: web 
+category: {{category}}
 description: can u reveal the flag
-
-# can be omitted
 attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)
-
-value: 500
-
+value: {{easy}}
+connection_info: "{{url}}:{{port}}"
 type: standard
-
-
 flags:
-   
     - 1ng3neer2k25{e5931290587f55ef75ed8494efb425fc}
-   
-
 tags:
-    - easy
+    - {{easy}}
     - "{sirmoncef}"
-    - web
-  
-
-
-files:
-    - 
-
-
+    - {{category}}
 state: hidden
-
-
 version: "0.1"
