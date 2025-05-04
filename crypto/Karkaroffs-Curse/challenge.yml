@@ -1,0 +1,22 @@
+challenge_name: "Karkaroff's Curse"
+
+author: "Yasser"
+
+category: "crypto"
+
+difficulty: "easy"
+
+type: "standard"
+
+description: |
+  The Death Eaters left behind a cursed cipher, said to be used by traitors like Karkaroff to send fragmented secrets.
+
+  Each piece is bound with Dark RSA magic and sealed with twisted MD5 incantations.
+
+  “Only those who can wield Dark Magic can break it,” they claimed.
+
+  Prove them wrong — decipher the curse and recover the hidden message.
+
+flag: "1ng3neer2k25{y0u_m4st3r3d_d4rk_m4g1c}"
+
+attribution: "Written by koyphshi"
