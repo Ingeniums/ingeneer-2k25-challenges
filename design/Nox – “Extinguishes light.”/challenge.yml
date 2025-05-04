@@ -3,20 +3,19 @@ author: "Dahoun Manel"
 category: design
 description: A Lumos charm gone wrong! Use Nox to dim down and restore Harry memories.
 attribution: Written by M4n3l(https://ctfd.io)
-value: 100
+value: {{easy}}
 difficulty: "easy"
 type: standard
 topics:
-  - design
-tags:
   - photoshop
-files:
-  - dist/source.py
+tags:
+  - {{category}}
+  - easy
+  - Dahoun Manel
 hints:
   - {
       content: "Try adjusting brightness and hue.",
       cost: 10
     }
   - Too much light can blur the truth—gently dim it to reveal what once was.
-
 version: "0.1"
