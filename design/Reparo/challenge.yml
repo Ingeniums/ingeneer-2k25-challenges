@@ -1,0 +1,20 @@
+attribution: Written by M4n3l(https://ctfd.io)
+author: Dahoun Manel
+category: {{category}}
+description: "The Marauder\u2019s Map has been damaged. Use Reparo to piece it back\
+  \ together!"
+difficulty: easy
+value: {{easy}}
+hints:
+- "Some pieces may still be hiding\u2014seek them elsewhere to make it whole again."
+name: Reparo
+topics:
+- photoshop
+- figma
+- illustrator
+tags:
+- {{category}}
+- Dahoun Manel
+- easy
+type: standard
+version: '0.1'

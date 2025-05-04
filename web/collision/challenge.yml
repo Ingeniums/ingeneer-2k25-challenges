@@ -9,7 +9,7 @@ type: standard
 flags:
     - 1ng3neer2k25{e5931290587f55ef75ed8494efb425fc}
 tags:
-    - {{easy}}
+    - easy
     - "{sirmoncef}"
     - {{category}}
 state: hidden
