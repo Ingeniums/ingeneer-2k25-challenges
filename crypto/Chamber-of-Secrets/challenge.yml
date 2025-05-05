@@ -1,14 +1,14 @@
-name: Polyjuice Potion Gone Wrong
+name: Chamber of Secrets
 author: Yasser
 category: {{category}}
 description: |
-  I gave you the potion , a potion that allowed the drinker to temporarily assume the physical form of someone else . 
+  He was standing at the end of a long, dimly lit chamber. Towering stone pillars entwined with more serpents, rose to a ceiling lost in darkness, casting long, black shadows through the odd, greenish gloom that filled the place.
 value: {{medium}}
 type: standard
 flags:
   - {
       type: "static",
-      content: "1ng3neer2k25{p0t10n_m4d3_m3_t1ny_w1n}",
+      content: "1ng3neer2k25{b4s1l1sk_1n_th3_p1p3s}",
     }
 tags:
   - medium
