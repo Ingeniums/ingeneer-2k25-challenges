@@ -1,0 +1,19 @@
+name: Polyjuice Potion Gone Wrong
+author: Yasser
+category: {{category}}
+description: |
+  I gave you the potion , a potion that allowed the drinker to temporarily assume the physical form of someone else . 
+value: {{medium}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{p0t10n_m4d3_m3_t1ny_w1n}",
+    }
+tags:
+  - medium
+  - Yasser
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by koyphshi
