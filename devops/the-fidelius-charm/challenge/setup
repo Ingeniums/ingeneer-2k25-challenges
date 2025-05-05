@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker container rm -f docker
+docker run --privileged -d --name docker docker:28.1.1-dind-alpine3.21
+
