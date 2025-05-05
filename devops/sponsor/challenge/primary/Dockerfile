@@ -2,7 +2,7 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir Flask requests cryptography
+RUN pip install --no-cache-dir Flask cryptography
 
 COPY decrypt_script.py /tmp/decrypt_script.py
 
