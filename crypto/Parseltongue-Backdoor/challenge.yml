@@ -1,0 +1,21 @@
+challenge_name: "Parseltongue Backdoor"
+author: "Yasser"
+category: "crypto"
+difficulty: "warmup"
+type: "standard"
+description: |
+  Greetings, Harry Potter!  
+  We’ve been waiting for you.  
+
+  Hidden in this enchanted forest are magical challenges crafted just for *The Boy Who Lived*.  
+  But beware — dark forces stir, and impostors wield forbidden spells to masquerade as mighty wizards.  
+
+  To prove you’re the true Harry, you must speak Parseltongue, the ancient tongue of serpents.  
+  The guardian snake has hissed a cryptic secret:  
+  🔒 Parseltongue: `1K2NQRS_CXN25OUAEEOXGR{CEPLUIX3EY_R_TGLXNEOUEDONS}`  
+
+  Decipher its meaning to unlock the path.  
+
+  Only then will the forest yield to you.  
+flag: "1ng3neer2k25{you_conquered_Parseltongue_coils}"
+attribution: "Written by koyphshi"
