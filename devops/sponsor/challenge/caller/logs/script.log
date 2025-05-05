@@ -1,0 +1,12 @@
+2025-05-05 17:57:49,083 - INFO - Script started.
+2025-05-05 17:57:49,084 - INFO - API_KEY successfully read.
+2025-05-05 17:57:49,084 - INFO - SECRET successfully read.
+2025-05-05 17:57:49,084 - INFO - SECRET2 successfully read.
+2025-05-05 17:57:49,148 - INFO - Encryption key derived from SECRET2.
+2025-05-05 17:57:49,505 - INFO - API call successful.
+2025-05-05 17:57:49,505 - INFO - Successfully extracted all properties from API response.
+2025-05-05 17:57:49,510 - INFO - Output data successfully encrypted. Use decrypt script for decryption.
+2025-05-05 17:57:49,511 - INFO - Encrypted output saved to /var/logs/output.encrypted
+2025-05-05 17:57:49,512 - INFO - Attempting to POST data to http://localhost:8000/submit
+2025-05-05 17:57:49,524 - ERROR - Submit call failed as expected (ConnectionError): HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /submit (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fccf3254f10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-05-05 17:57:49,524 - INFO - Script finished.
