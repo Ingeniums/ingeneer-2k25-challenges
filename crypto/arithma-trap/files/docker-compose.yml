@@ -1,0 +1,6 @@
+version: '3'
+services:
+  challenge:
+    image: koyphsh1/arithmatrap:latest
+    ports:
+      - "4000:4000"
