@@ -1,34 +1,16 @@
-name: "The Howler Secret"
-
-author: "{sirmoncef}"
-category: forensics 
-description: A mysterious Howler was sent to a Hogwarts student, but instead of a loud message, it arrived suspiciously... silent.
-
-# can be omitted
-attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)
-
-value: 500
-
+name: The Howler Secret
+author: {sirmoncef}
+category: {{category}}
+description: |
+  A mysterious Howler was sent to a Hogwarts student, but instead of a loud message, it arrived suspiciously... silent.
+value: {{easy}}
 type: standard
-
-
 flags:
-   
-    - 1ng3neer2k25{h0wl3r_s3cr3t}
-   
-
+  - 1ng3neer2k25{h0wl3r_s3cr3t}
 tags:
-    - easy
-    - "{sirmoncef}"
-    - forensics
-    - Steganography
-
-
-files:
-    - files/*
-
-
+  - easy
+  - {sirmoncef}
+  - {{category}}
 state: hidden
-
-
 version: "0.1"
+attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)

@@ -1,34 +1,20 @@
-name: "Pensieve Dump"
-
-author: "{sirmoncef}"
-category: forensics 
-description: Some things linger in the air… 
-
-# can be omitted
-attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)
-
-value: 500
-
-type: standard
-
-
+name: Pensieve Dump
+author: {sirmoncef}
+category: {{category}}
+description: |
+  Some things linger in the air…
+value: {{hard}}
+type: dynamic
 flags:
-   
-    - 1ng3neer2k25{74379d8de77aa4adc43cedfc248d6800}
-   
-
+  - {
+      type: "static",
+      content: "1ng3neer2k25{74379d8de77aa4adc43cedfc248d6800}",
+    }
 tags:
-    - Hard
-    - "{sirmoncef}"
-    - forensics
-    - Memory forensics
-
-
-files:
-    - # i will share the link soon
-
-
+  - hard
+  - {sirmoncef}
+  - {{category}}
+  - Memory forensics
 state: hidden
-
-
 version: "0.1"
+attribution: Written by [{sirmoncef}](https://sirmoncef.github.io/)
