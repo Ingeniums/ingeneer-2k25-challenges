@@ -1,0 +1,19 @@
+name: The Trace  
+author: Yasser
+category: {{category}}
+description: |
+  proved by Hasse
+value: {{medium}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{br34ch3d_th3_tr4c3}",
+    }
+tags:
+  - medium
+  - Yasser
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by koyphshi
