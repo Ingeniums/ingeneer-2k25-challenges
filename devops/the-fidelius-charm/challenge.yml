@@ -1,10 +1,13 @@
 name: "The Fidelius Charm"
 author: "youness"
 category: {{category}}
-description: Neville Longbottom attempted to secure a vital flag with a Digital Fidelius in the Main service, but something isn't quite right – the necessary resources from the Caller service aren't making it through. Can you provide the Main service with the necessary resources and retrieve the hidden flag?
+description: |
+  Neville Longbottom attempted to secure a vital flag with a Digital Fidelius in the Main service,
+  but something isn't quite right – the necessary resources from the Caller service aren't making it through.
+  Can you provide the Main service with the necessary resources and retrieve the hidden flag?
 value: {{medium}}
 type: dynamic
-connection_info: docker pull ymerzouka/fidelius-charm:v1.1
+connection_info: docker pull ymerzouka/fidelius-charm:latest
 flags:
     - 1ng3neer2k25{w311_it_w0rk5_0n_my_m4ch1n3}
 topics:

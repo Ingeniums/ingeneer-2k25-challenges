@@ -22,32 +22,44 @@ while [ $ELAPSED -lt $MAX_WAIT ]; do
   fi
 done
 
-echo "Creating dummy folders..."
-rm -r ./var/logs/*
-volume_path="$(python generator.py var/logs/ | sed "s|$(pwd)/var/logs/||g")"
-echo $volume_path > path
+read -p "Regenrated /var/logs [y/n]: " folder_answer
+if [ "$folder_answer" == "y" ]; then
+    echo "Creating dummy folders..."
+    rm -r ./var/logs/*
+    volume_path="$(python generator.py var/logs/ | sed "s|$(pwd)/var/logs/||g")"
+    echo $volume_path > path
+    
+    echo "Removing dummy files..."
+    rm ./var/logs/$volume_path/*
+    docker cp ./var/logs docker:/var/
+fi
 
-echo "Removing dummy files..."
-rm ./var/logs/$volume_path/*
-docker cp ./var/logs docker:/var/
+read -p "Update story [y/n]: " story_answer
+if [ "$story_answer" == "y" ]; then
+    echo "Copying story..."
+    docker cp ./story.md docker:/
+fi
 
-echo "Copying story..."
-docker cp ./story.md docker:/
+read -p "Update compose.yaml [y/n]: " compose_answer
+if [ "$compose_answer" == "y" ]; then
+    echo "Launching containers..."
+    docker cp ./compose.yaml docker:/
+    docker exec -it docker docker compose -f /compose.yaml up -d
+    echo "Done launching containers..."
+fi
 
-echo "Launching containers..."
-docker cp ./compose.yaml docker:/
-docker exec -it docker docker compose -f /compose.yaml up -d
+if [ "$folder_answer" == "y" ]; then
+    echo "Create a volume using:"
+    docker exec -it docker docker run -e API_KEY=1b58b88b2cb64316b2f4e631154d6eb1 \
+        -e SECRET=Th1s_1s_4_Pr1m4ry_Qy3a6bEDTygrcLcwf5cwcilXVBGZMYCa6l537eARP55f1g80CfThwXGEaDivJ2EQ \
+        -e SECRET2=sSWKQqfbsf7gAI1yUcKwHqB8VadaI0fjnvyUI5mQeyVrlKENdjS9yoaFt5jHn3y3 \
+        -v /var/logs/$volume_path:/var/logs \
+        --name caller -d ymerzouka/fidelius-charm-caller:latest
 
-echo "Done launching containers..."
-echo "Create a volume using:"
-docker exec -it docker docker run -e API_KEY=1b58b88b2cb64316b2f4e631154d6eb1 \
-    -e SECRET=Th1s_1s_4_Pr1m4ry_Qy3a6bEDTygrcLcwf5cwcilXVBGZMYCa6l537eARP55f1g80CfThwXGEaDivJ2EQ \
-    -e SECRET2=sSWKQqfbsf7gAI1yUcKwHqB8VadaI0fjnvyUI5mQeyVrlKENdjS9yoaFt5jHn3y3 \
-    -v /var/logs/$volume_path:/var/logs \
-    --name caller -d ymerzouka/fidelius-charm-caller:v1.3
+    echo "Getting container information..."
+    sleep 8
+    docker exec docker docker inspect caller > ./caller/info
+    cp ./caller/info ../files/
+    docker exec docker docker container rm -f caller
+fi
 
-echo "Getting container information..."
-sleep 8
-docker exec docker docker inspect caller > ./caller/info
-cp ./caller/info ../files/
-docker exec docker docker container rm -f caller

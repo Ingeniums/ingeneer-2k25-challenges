@@ -3,10 +3,10 @@ name: fidelius-charm
 
 services:
   caller:
-    image: "ymerzouka/fidelius-charm-caller:v1.3"
+    image: "ymerzouka/fidelius-charm-caller:latest"
     network_mode: none
   main:
-    image: "ymerzouka/fidelius-charm-main:v1.1"
+    image: "ymerzouka/fidelius-charm-main:latest"
     network_mode: none
     ports:
       - "8000:8000"
