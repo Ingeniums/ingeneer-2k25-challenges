@@ -2,16 +2,16 @@ name: The ArithmaTrap
 author: Yasser
 category: {{category}}
 description: |
-Ah, Percy Weasley... you want the secret?
-Too bad—it's hidden deep inside The ArithmaTrap.
-An ancient number game with just one way out.
-
-You’ll need sharp eyes, fast thinking, and maybe a bit of luck (or a wand).
-The numbers are waiting.
-After all , we are Weasleys' Wizard Wheezes.
+  Ah, Percy Weasley... you want the secret?
+  Too bad—it's hidden deep inside The ArithmaTrap.
+  An ancient number game with just one way out.
+  
+  You’ll need sharp eyes, fast thinking, and maybe a bit of luck (or a wand).
+  The numbers are waiting.
+  After all , we are Weasleys' Wizard Wheezes.
 
 value: {{warmup}}
-type: standard
+type: dynamic
 flags:
   - {
       type: "static",
