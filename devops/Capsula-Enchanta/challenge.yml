@@ -17,7 +17,6 @@ tags:
     - devops
     - youness
     - warmup
-files: null
 hints:
     - docker logs?
     - code reading is an important skill
