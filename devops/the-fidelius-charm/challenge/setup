@@ -31,6 +31,9 @@ echo "Removing dummy files..."
 rm ./var/logs/$volume_path/*
 docker cp ./var/logs docker:/var/
 
+echo "Copying story..."
+docker cp ./story.md docker:/
+
 echo "Launching containers..."
 docker cp ./compose.yaml docker:/
 docker exec -it docker docker compose -f /compose.yaml up -d
