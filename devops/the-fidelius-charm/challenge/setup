@@ -49,4 +49,5 @@ docker exec -it docker docker run -e API_KEY=1b58b88b2cb64316b2f4e631154d6eb1 \
 echo "Getting container information..."
 sleep 8
 docker exec docker docker inspect caller > ./caller/info
+cp ./caller/info ../files/
 docker exec docker docker container rm -f caller
