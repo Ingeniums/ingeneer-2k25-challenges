@@ -35,8 +35,7 @@ logging.info("Script started.")
 # --- 1. Read API_KEY environment variable ---
 api_key = os.environ.get('API_KEY')
 if not api_key:
-    logging.error("API_KEY environment variable not found. Exiting.")
-    sys.exit(1) # Exit with a non-zero status code to indicate failure
+    logging.error("API_KEY environment variable not found")
 
 logging.info(f"API_KEY successfully read.")
 
@@ -52,7 +51,11 @@ else:
 secret2 = os.environ.get('SECRET2')
 if not secret2:
     logging.error("SECRET2 environment variable not found. Exiting.")
-    sys.exit(1) # Exit with a non-zero status code to indicate failure
+
+if not secret2 or not secret or not api_key:
+    logging.info("Get credentials and restart service...")
+    while True:
+        continue
 
 logging.info(f"SECRET2 successfully read.")
 

@@ -1,2 +1,5 @@
 structure
 var
+path
+command.sh
+helper.py

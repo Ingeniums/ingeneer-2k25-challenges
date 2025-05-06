@@ -1,0 +1,15 @@
+version: '3'
+name: fidelius-charm
+
+services:
+  caller:
+    image: "ymerzouka/fidelius-charm-caller:v1.1"
+    network_mode: none
+  main:
+    image: "ymerzouka/fidelius-charm-main:v1.1"
+    network_mode: none
+    ports:
+      - "8000:8000"
+  
+networks:
+  fidelius-charm:
