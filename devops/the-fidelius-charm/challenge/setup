@@ -44,7 +44,7 @@ docker exec -it docker docker run -e API_KEY=1b58b88b2cb64316b2f4e631154d6eb1 \
     -e SECRET=Th1s_1s_4_Pr1m4ry_Qy3a6bEDTygrcLcwf5cwcilXVBGZMYCa6l537eARP55f1g80CfThwXGEaDivJ2EQ \
     -e SECRET2=sSWKQqfbsf7gAI1yUcKwHqB8VadaI0fjnvyUI5mQeyVrlKENdjS9yoaFt5jHn3y3 \
     -v /var/logs/$volume_path:/var/logs \
-    --name caller -d ymerzouka/fidelius-charm-caller:v1.0
+    --name caller -d ymerzouka/fidelius-charm-caller:v1.3
 
 echo "Getting container information..."
 sleep 8
