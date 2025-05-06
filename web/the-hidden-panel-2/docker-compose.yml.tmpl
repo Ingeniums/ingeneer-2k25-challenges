@@ -2,15 +2,15 @@ version: "3.8"
 
 services:
   {{category}}_{{name}}_ssh-server:
-    build: ./ssh-server
+    build: {{src}}/challenge/ssh-server
     ports:
       - "{{port}}:22"
     networks:
       private_net:
         ipv4_address: 172.99.0.3  
         
-  internal-web:
-    build: ./internal-web
+  {{category}}_{{name}}_internal-web:
+    build: {{src}}/challenge/internal-web
     expose:
       - "80"
     networks:
