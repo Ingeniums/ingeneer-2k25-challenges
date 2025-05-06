@@ -1,0 +1,20 @@
+
+name:  Wizard’s Chess  
+author: Yasser
+category: {{category}}
+description: |
+  Do you want to stop Snape or not? Harry — it’s you that has to go on, I know it. Not me, not Hermione — you.
+value: {{medium}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{0nly_Y0u_C4n_P4ss}",
+    }
+tags:
+  - medium
+  - Yasser
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by koyphshi
