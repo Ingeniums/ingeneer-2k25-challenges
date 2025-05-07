@@ -25,7 +25,7 @@ flags:
     }
 # difficulty, author, category ARE MANDATORY may be other things you see fit
 tags:
-  # warmup/easy/medium/hard/tough
+  # One of: warmup/easy/medium/hard/tough
     - difficulty
   # this is to know which challenge was made by which author
     - author

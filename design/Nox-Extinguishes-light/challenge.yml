@@ -1,4 +1,4 @@
-name: "Nox – “Extinguishes light.”"
+name: "Nox–Extinguishes light"
 author: "Dahoun Manel"
 category: {{category}}
 description: A Lumos charm gone wrong! Use Nox to dim down and restore Harry memories.
@@ -13,7 +13,7 @@ tags:
   - Dahoun Manel
 hints:
   - {
-      contented: "Try adjusting brightness and hue.",
+      content: "Try adjusting brightness and hue.",
       cost: 10
     }
   - Too much light can blur the truth—gently dim it to reveal what once was.
