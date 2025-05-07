@@ -1,6 +1,6 @@
 challenge_name: "Parseltongue Backdoor"
 author: "Yasser"
-category: "crypto"
+category: {{category}}
 difficulty: "warmup"
 type: "standard"
 description: |
@@ -17,5 +17,13 @@ description: |
   Decipher its meaning to unlock the path.  
 
   Only then will the forest yield to you.  
-flag: "1ng3neer2k25{you_conquered_Parseltongue_coils}"
+flags:
+  - 1ng3neer2k25{you_conquered_Parseltongue_coils}
 attribution: "Written by koyphshi"
+value: warmup
+tags:
+  - warmup
+  - Yasser
+  - {{category}}
+state: hidden
+version: "0.1"
