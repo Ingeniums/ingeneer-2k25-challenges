@@ -16,11 +16,11 @@ connection_info: nc {{host}} {{port}}
 # remove if unused
 flags:
     # A static case sensitive flag
-    - flag{3xampl3}
+    -  1ng3neer2k25{3xampl3}
     # A static case insensitive flag
     - {
         type: "static",
-        content: "flag{wat}",
+        content: "1ng3neer2k25{wat}",
         data: "case_insensitive",
     }
 # difficulty, author, category ARE MANDATORY may be other things you see fit
