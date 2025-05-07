@@ -1,18 +1,23 @@
 from Crypto.Util.number import getPrime, bytes_to_long
 from sage.all import *
+from random import getrandbits
 from flag import SECRET
 
 S = bytes_to_long(SECRET)
+rock = getrandbits(30)
 
 roots = [getPrime(19) for _ in range(19)]
 branches = [getPrime(19) for _ in range(19)]
 
-forest_whisper = sum(S*(roots[i]**2) + 19*(branches[i]**2) for i in range(19))
+Quidditch = 99999999999999999999999999999999999999999999
+
+forest_whisper = sum(S*(roots[i]**2) + rock*(branches[i]**2)*Quidditch for i in range(19))
+
 
 F = RDF 
 x = vector(F, roots)
 y = vector(F, branches)
-
+b = round(y.norm()**2)
 for _ in range(119):
     A = random_matrix(F, 19)
     Q, R = A.QR()
