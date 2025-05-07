@@ -1,5 +1,5 @@
 name: Pensieve Dump
-author: {sirmoncef}
+author: "{sirmoncef}"
 category: {{category}}
 description: |
   Some things linger in the air…
@@ -12,7 +12,7 @@ flags:
     }
 tags:
   - hard
-  - {sirmoncef}
+  - "{sirmoncef}"
   - {{category}}
   - Memory forensics
 state: hidden

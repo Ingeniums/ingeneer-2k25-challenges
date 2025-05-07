@@ -1,5 +1,5 @@
 name: Collision
-author: {sirmoncef}
+author: "{sirmoncef}"
 category: {{category}}
 description: |
   Can you reveal the flag?
@@ -11,7 +11,7 @@ flags:
   - 1ng3neer2k25{e5931290587f55ef75ed8494efb425fc}
 tags:
   - easy
-  - {sirmoncef}
+  - "{sirmoncef}"
   - {{category}}
 state: hidden
 version: "0.1"

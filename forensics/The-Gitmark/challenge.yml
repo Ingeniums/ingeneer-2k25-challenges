@@ -1,5 +1,5 @@
 name: The Gitmark
-author: {sirmoncef}
+author: "{sirmoncef}"
 category: {{category}}
 description: |
   You Know What To DO . when u find the piece put it in 1ng3neer2k25{}
@@ -9,7 +9,7 @@ flags:
   - 1ng3neer2k25{wolfwizard}
 tags:
   - medium
-  - {sirmoncef}
+  - "{sirmoncef}"
   - {{category}}
 state: hidden
 version: "0.1"
