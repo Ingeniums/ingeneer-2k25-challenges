@@ -9,11 +9,6 @@ description: |
   you must also create a new full color palette for each house
 value: {{tough}}
 type: dynamic
-flags:
-  - {
-      type: "static",
-      content: "",
-    }
 tags:
   - tough
   - Mountassar
