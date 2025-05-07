@@ -1,6 +1,6 @@
 name: Head Curator
 author: 1nitramfs
-category: web
+category: {{category}}
 description: |
   Your discovery in the House of Spells led you to a sealed ledger tucked behind a shifting bookcase — a record of magical artifacts recently "submitted" to the castle's archives. Curiously, the entries weren't logged by professors, but by the Head Curator.
 attribution: Written by [1nitramfs](https://github.com/Mehloul-Mohamed/)
@@ -8,13 +8,10 @@ value: {{easy}}
 type: standard
 connection_info: "{{url}}:{{port}}"
 flags:
-    - {
-        type: "static",
-        content: "1ng3neer2k25{Y4ml_Y0uR_w4y_1n}",
-    }
+  - 1ng3neer2k25{Y4ml_Y0uR_w4y_1n}
 tags:
-  - web
+  - {{category}}
   - easy
-  - Head Curator
+  - 1nitramfs
 state: hidden
 version: "0.1"
