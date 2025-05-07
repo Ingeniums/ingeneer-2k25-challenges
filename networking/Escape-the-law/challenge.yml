@@ -1,0 +1,19 @@
+name: "Escape the law"
+author: "th31rtist"
+category: {{category}}
+description: |
+  Harry wants to talk with Hermione, but there is a strong barrier preventing them from talking.
+  However, there is a way for them to communicate without breaking the barrier. Can you find it?
+  Note: both harry and hermione must stay in their private rooms :)
+value: {{hard}}
+type: standard
+flags:
+  - 1ng3neer2k25{1ts_all_ab0ut_t1gging}
+connection_info: nc {{host}} {{port}}
+tags:
+  - hard
+  - th31rtist
+  - {{category}}
+attribution: "Written by th31rtist"
+state: hidden
+version: "0.1"
