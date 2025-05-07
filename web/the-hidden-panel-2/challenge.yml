@@ -1,6 +1,6 @@
 name: "The Hidden Panel 2"
 author: "ilyes_haddad_"
-category: web 
+category: {{category}}
 description: |
     You've tunneled your way past the castle’s defenses and found yourself before an ancient spellbook — bound in dragonhide, humming with suppressed magic.
     This time it’s not just about "finding" anymore... it’s about "breaking the spells" using deep magic.
@@ -14,9 +14,8 @@ description: |
     The true flag lies not in the spells written before you, but in the spellbook’s very heart — hidden from sight, protected by ancient, flawed magic.
 
 attribution: Written by [ilyes_haddad_](https://ilyeshaddad.com/)
-value: {{difficulty}}
+value: {{medium}}
 type: standard
-protocol: null
 connection_info: ssh -o IdentitiesOnly=yes -o PreferredAuthentications=password ctfplayer@{{host}} -p {{port}}
 
 flags:
@@ -26,12 +25,8 @@ flags:
     }  
 
 tags:
-    - Medium
+    - medium
     - ilyes_haddad_
-    - web
-
-
-files:
-    - challenge/*
+    - {{category}}
 state: hidden
 version: "0.1"
