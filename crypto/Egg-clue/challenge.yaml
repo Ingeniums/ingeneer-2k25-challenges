@@ -2,7 +2,9 @@ name: Egg Clue
 author: Yasser
 category: {{category}}
 description: |
-  If you look down at those golden eggs you’re all holding, you will see that they open ... see the hinges there? You need to solve the clue inside the egg — because it will tell you what the second task is, and enable you to prepare for it!
+  If you look down at those golden eggs you’re all holding, you will see that they open ...
+  see the hinges there? You need to solve the clue inside the egg — because it will tell you what the second task is,
+  and enable you to prepare for it!
 value: {{easy}}
 type: dynamic
 flags:
