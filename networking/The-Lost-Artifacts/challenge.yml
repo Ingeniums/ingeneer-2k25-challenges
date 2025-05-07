@@ -1,0 +1,22 @@
+name: "The Lost Artifacts"
+author: "th31rtist"
+category: {{category}}
+description: |
+  In an enchanted network connecting the castles of Hogwarts, students were able to communicate and collaborate magically.
+  But dark forces have interfered. Some sinister figures infiltrated the magical network,
+  stealing vital components that kept the system running. Now, the connection between the houses is broken,
+  and the students are isolated. The task is clear: recover what was stolen, so the school can return to its normal magical harmony.
+value: {{easy}}
+connection_info: nc {{host}} {{port}}
+type: standard
+flags:
+  - 1ng3neer2k25{g0t_1t_b4ck_r3stored_magic_7w1tch}
+hints:
+  - "Hop Hop"
+tags:
+  - easy
+  - th31rtist
+  - {{category}}
+attribution: "Written by th31rtist"
+state: hidden
+version: "0.1"
