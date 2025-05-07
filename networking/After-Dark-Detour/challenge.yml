@@ -1,0 +1,20 @@
+name: "After-Dark Detour"
+author: "th31rtist"
+category: {{category}}
+description: |
+  Harry visits Hermione daily via the safe Daylight Path (20), but after 9 PM,and till 6 AM, Dementors patrol it, it's DANGER_TIME,  forcing him to take the hidden Midnight Chimney (10). And harry needs to set  his traffic automatically switching paths—PATH 20 by day (6 AM–9 PM), PATH 10 by night (9 PM–6 AM)—Help him to set this up.
+  Note that there is a guard in the crossroad, named 101, that let's harry through and choose his path.
+value: {{medium}}
+type: standard
+flags:
+  - 1ng3neer2k25{Aft3r_Dark_Wiz4rd5_Win}
+hints:
+  - "I helped you with the naming, and the guard is already there."
+connection_info: nc {{host}} {{port}}
+tags:
+  - medium
+  - th31rtist
+  - {{category}}
+attribution: "Written by th31rtist"
+state: hidden
+version: "0.1"
