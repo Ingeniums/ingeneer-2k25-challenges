@@ -1,6 +1,6 @@
 name: "Ministry Form Checker"
 author: "1nitramfs"
-category: devops
+category: {{category}}
 description: |
   [“It's just a form checker”](https://github.com/Ingeniums/Ministry-Form-Checker), said the clerk with a shrug. But you noticed the sigil on the corner—a whispering key surrounded by runes. The owl blinked once and dropped a scroll addressed to you. Odd. 
 attribution: Written by [1nitramfs](https://github.com/Mehloul-Mohamed/)
@@ -9,9 +9,8 @@ type: dynamic
 flags:
     - 1ng3neer2k25{G1thub_4ct1ons_4r3_m4g1c}
 tags:
-    - devops
+    - {{category}}
     - 1nitramfs
     - medium
-hints:
 state: hidden
 version: "0.1"

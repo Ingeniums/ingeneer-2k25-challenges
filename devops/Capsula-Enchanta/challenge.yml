@@ -1,6 +1,6 @@
 name: "Capsula Enchanta"
 author: "youness"
-category: devops
+category: {{category}}
 description: |
   Professor Flitwick's late-night Capsula Enchanta experiment went awry! A crucial Mooncalf scale has vanished inside one of the enchanted capsules. Using your containerization expertise, navigate the capsule's internal environment to locate and carefully retrieve the lost scale for the Professor. His research depends on it!
 attribution: Written by youness
@@ -14,7 +14,7 @@ topics:
     - docker
     - cli
 tags:
-    - devops
+    - {{category}}
     - youness
     - warmup
 hints:
