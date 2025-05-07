@@ -3,7 +3,7 @@ author: Yasser
 category: {{category}}
 description: |
   proved by Hasse
-value: {{medium}}
+value: medium
 type: standard
 flags:
   - {
