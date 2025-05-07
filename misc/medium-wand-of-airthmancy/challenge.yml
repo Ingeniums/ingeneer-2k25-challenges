@@ -1,19 +1,20 @@
 name: Wand Of Airthmancy
 author: 1nitramfs
-category: misc
+category: {{category}}
 description: |
   High atop the Astronomy Tower, a whisper floats on enchanted air currents—an ancient spell, known only to those who study Arithmancy and elemental magics. The wind carries only certain runes, and only the right incantation will bend it to your will. Can you shape a charm the air will accept... and reveal what lies beyond?
 attribution: Written by [1nitramfs](https://github.com/Mehloul-Mohamed/)
 value: {{medium}}
 type: standard
-connection_info: "{{url}}:{{port}}"
+connection_info: nc {{host}} {{port}}
 flags:
     - {
         type: "static",
         content: "1ng3neer2k25{And_7heN_7H3rE_WeRE_None}",
     }
 tags:
-  - misc
+  - {{category}}
   - pyjail
+  - 1nitramfs
 state: hidden
 version: "0.1"
