@@ -9,11 +9,6 @@ description: |
   are allowed, the crest must be in a different style than the original one, but you must use the same color palette
 value: {{hard}}
 type: dynamic
-flags:
-  - {
-      type: "static",
-      content: "",
-    }
 tags:
   - hard
   - Mountassar
