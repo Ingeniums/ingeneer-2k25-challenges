@@ -11,7 +11,7 @@ for rune in scroll:
 
 # Trim the spell to fit the Standard Book of Spells
 parchment = parchment[0:22]
-print(parchment)
+
 if parchment == "":
     print("A silent wand does no magic...")
     exit()
@@ -25,7 +25,7 @@ try:
 except:
     print('wierd magic value...')
     pass
-print('sfv:',magic)
+
 if magic and magic > 0:
     print("Your charm fizzled... Try a stronger spell.")
     exit()
