@@ -1,0 +1,23 @@
+name: "The Switch of Secrets"
+author: "th31rtist"
+category: {{category}}
+description: |
+  A magical artifact hides in plain sight among Hogwarts' network devices.
+  The secret lies not in spells or runes, but in what the device itself reveals.
+  Note: netcat to the shell and type the right command to see the result you want "type commands fully without abbreviations".
+  For each network device, you can access and configure a view I created called 'participant'.
+  When you enter a network device, type "enable view participant" and use the password "SuperStrongPassword".
+value: {{easy}}
+type: standard
+flags:
+  - 1ng3neer2k25{magic_wand_spell}
+hints:
+  - "Interfaces speak when properly questioned. What do their mundane details whisper?"
+connection_info: nc {{host}} {{port}}
+tags:
+  - easy
+  - th31rtist
+  - {{category}}
+attribution: "Written by th31rtist"
+state: hidden
+version: "0.1"
