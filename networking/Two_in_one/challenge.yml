@@ -1,0 +1,21 @@
+name: "Two_in_one"
+author: "th31rtist"
+category: {{category}}
+description: |
+  Harry is a great wizard, but sometimes he forgets to do important things.
+  It's okey, even if you find it you can't do anything with it, Can you ?
+value: {{medium}}
+type: standard
+flags:
+  - 1ng3neer2k25{Crypt0_plus_N3tw0rk1ng_3qual5_fr13nd5}
+hints:
+  - |
+    Not so secret yeah ... but is it that strong ? 
+    Wow ! french scientists in networking ! that's new !
+tags:
+  - medium
+  - th31rtist
+  - {{category}}
+attribution: "Written by th31rtist"
+state: hidden
+version: "0.1"
