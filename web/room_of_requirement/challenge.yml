@@ -5,6 +5,7 @@ description: |
   Hogwarts has created a new web application for students to practice their spells. The Room of Requirement, as always, provides exactly what you need - if you know how to ask for it.
 value: {{hard}}
 type: standard
+protocol: http
 connection_info: "{{url}}:{{port}}"
 flags:
   - 1ng3neer2k25{Wh0_kn3w_f$triNgs_w3r3_tH1s_DaNg3r0us}

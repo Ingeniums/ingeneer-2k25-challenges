@@ -6,6 +6,7 @@ description: |
 attribution: Written by [1nitramfs](https://github.com/Mehloul-Mohamed/)
 value: {{easy}}
 type: standard
+protocol: http
 connection_info: "{{url}}:{{port}}"
 flags:
   - 1ng3neer2k25{Y4ml_Y0uR_w4y_1n}

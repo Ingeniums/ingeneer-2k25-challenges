@@ -9,6 +9,7 @@ description: |
   "Dobby knows of such a room, sir... A Room that appears when one is in great need... and it hides itself well."
 value: {{easy}}
 type: standard
+protocol: ssh
 connection_info: ssh -o IdentitiesOnly=yes -o PreferredAuthentications=password ctfplayer@{{host}} -p {{port}}
 flags:
   - 1ng3neer2k25{ssh_tunn3ll1ng_is_4w3s0me}

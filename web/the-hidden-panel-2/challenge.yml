@@ -14,6 +14,7 @@ description: |
   The true flag lies not in the spells written before you, but in the spellbook's very heart - hidden from sight, protected by ancient, flawed magic.
 value: {{medium}}
 type: standard
+protocol: ssh
 connection_info: ssh -o IdentitiesOnly=yes -o PreferredAuthentications=password ctfplayer@{{host}} -p {{port}}
 flags:
   - 1ng3neer2k25{th4t_was_tough_ssti_with_ssh_tunn3ll1ng}

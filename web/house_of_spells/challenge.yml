@@ -5,6 +5,7 @@ description: |
   While wandering the castle one evening, you found a room you'd never noticed before. Its door stood ajar, warm to the touch, with a faded sign above it: House of Spells. Inside, an enchanted display listed spells by house - but the magic flickered. For a moment, something strange surfaced beneath: broken runes, forgotten enchantments... or protections long since unraveled.
 value: {{easy}}
 type: standard
+protocol: http
 connection_info: "{{url}}:{{port}}"
 flags:
   - 1ng3neer2k25{M4y_w3_n3veR_Cr0ss_pa7h$_4ga1n}

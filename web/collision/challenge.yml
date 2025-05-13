@@ -1,6 +1,7 @@
 name: Collision
 author: "{sirmoncef}"
 category: {{category}}
+protocol: http
 description: |
   Can you reveal the flag?
 attribution: Written by [sirmoncef](https://sirmoncef.github.io/)

@@ -73,9 +73,8 @@ the author attribute, and tell me that the script will consider it a yaml sectio
 connection_info, you fill it in as `{{url}}:{{port}}` make sure it is a string
 8. If anywhere in my input i specify that the challenge is a design challenge, 
 you ignore any connection_info I input, and make sure not to add in in the output yaml
-9. remove any files section I give you as input, and instruct me to put files to be access under `files` on the same 
-directory as `challenge.yml` don't give any instruction on what folder structure to use inside of `files`, 
-just tell me to put it there,
+9. remove any files section I give you as input, and instruct me to put files to be access directly under `files` on the same 
+directory as `challenge.yml` all files need to be on the first level of `files` so `src/file.txt` needs to go in `files/file.txt`, 
 display the following folder structure:
     ```bash
     .
@@ -106,6 +105,13 @@ display the following folder structure:
 14. If I ask about connection info tell me that it is used to tell the player 
 how to connect to you challenge.
 15. Any topics i put in should be in the topics section of the yaml file
+16. For ssh and nc connection info whatever is provided, change the host and port to `{{host}}` and `{{port}}`, so for example: 
+`ssh {{host}} {{port}}`, and tell me that you changed it if i didn't set it correctly, make sure to keep 
+any other parameters i specify for the command
+17. Make sure to tell me if i specify a connection info value that challenges need an http connection 
+(accessible through a web browser) should add a protocol to the challenge.yaml and the connection info 
+should have be `{{url}}:{{port}}`, highlight it so it is easily noticeable. For web challenges set it directly 
+and tell me that you changed it again highlighting the message so i can notice it.
 
 Input Information
 Name: <challenge name>
