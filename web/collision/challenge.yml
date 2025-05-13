@@ -6,7 +6,7 @@ description: |
   Can you reveal the flag?
 attribution: Written by [sirmoncef](https://sirmoncef.github.io/)
 value: {{easy}}
-connection_info: "{{url}}:{{port}}"
+connection_info: "{{url}}"
 type: standard
 flags:
   - 1ng3neer2k25{e5931290587f55ef75ed8494efb425fc}

@@ -6,7 +6,7 @@ description: |
 value: {{hard}}
 type: standard
 protocol: http
-connection_info: "{{url}}:{{port}}"
+connection_info: "{{url}}"
 flags:
   - 1ng3neer2k25{Wh0_kn3w_f$triNgs_w3r3_tH1s_DaNg3r0us}
 tags:

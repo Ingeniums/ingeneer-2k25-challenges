@@ -12,8 +12,10 @@ attribution: Written by [author](https://ctfd.io)
 # {{warmup}}/{{easy}}/{{medium}}/{{hard}}/{{tough}}
 value: {{difficulty}}
 type: standard
+# for web challenges
+protocol: http
 # info on how to connect to a challenge, use {{port}} for port, and {{host}} for host
-# for WEB challenges with http access set to {{url}}:{{port}}
+# for WEB challenges with http access set to {{url}}
 # remove if not needed
 connection_info: nc {{host}} {{port}}
 # remove if unused
@@ -70,7 +72,9 @@ flags:
 6. If my author name contains `{}` put it between quotes (make it a string) both in the tags section and 
 the author attribute, and tell me that the script will consider it a yaml section if it is not quoted
 7. If anywhere in my input i specify that the challenge is web and i don't provide any 
-connection_info, you fill it in as `{{url}}:{{port}}` make sure it is a string
+connection_info, you fill it in as `{{url}}` make sure it is a string, if i specify a connection_info 
+give some sort of noticeable warning that challenges meant to be accessible through the web should be set 
+to `{{url}}` display this warning first and highlight it.
 8. If anywhere in my input i specify that the challenge is a design challenge, 
 you ignore any connection_info I input, and make sure not to add in in the output yaml
 9. remove any files section I give you as input, and instruct me to put files to be access directly under `files` on the same 
@@ -108,10 +112,6 @@ how to connect to you challenge.
 16. For ssh and nc connection info whatever is provided, change the host and port to `{{host}}` and `{{port}}`, so for example: 
 `ssh {{host}} {{port}}`, and tell me that you changed it if i didn't set it correctly, make sure to keep 
 any other parameters i specify for the command
-17. Make sure to tell me if i specify a connection info value that challenges need an http connection 
-(accessible through a web browser) should add a protocol to the challenge.yaml and the connection info 
-should have be `{{url}}:{{port}}`, highlight it so it is easily noticeable. For web challenges set it directly 
-and tell me that you changed it again highlighting the message so i can notice it.
 
 Input Information
 Name: <challenge name>

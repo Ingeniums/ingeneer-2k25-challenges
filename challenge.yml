@@ -9,8 +9,10 @@ attribution: Written by [author](https://ctfd.io)
 # {{warmup}}/{{easy}}/{{medium}}/{{hard}}/{{tough}}
 value: {{difficulty}}
 type: standard
+# for challenges accessible from the browser
+protocol: http
 # info on how to connect to a challenge, use {{port}} for port, and {{host}} for host
-# for WEB challenges with http access set to {{url}}:{{port}}
+# for WEB challenges with http access set to {{url}}
 # remove if not needed
 connection_info: nc {{host}} {{port}}
 # remove if unused
