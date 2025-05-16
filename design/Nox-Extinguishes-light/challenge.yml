@@ -4,6 +4,7 @@ category: {{category}}
 description: A Lumos charm gone wrong! Use Nox to dim down and restore Harry memories.
 attribution: Written by M4n3l(https://ctfd.io)
 value: {{easy}}
+submit: drive
 type: standard
 topics:
   - photoshop

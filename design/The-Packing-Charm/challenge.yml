@@ -5,6 +5,7 @@ description: |
   Pages from an enchanted tome have been scrambled by a mischievous charm. Nothing is where it should be, yet every piece yearns to return home.
 value: {{medium}}
 type: standard
+submit: drive
 tags:
   - medium
   - Dahoun Manel

@@ -4,6 +4,7 @@ category: {{category}}
 description: |
   A dark charm has clouded this image. Use the Lumos charm to bring it back into the light.
 value: {{warmup}}
+submit: drive
 type: standard
 tags:
   - warmup

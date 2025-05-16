@@ -5,6 +5,7 @@ description: |
   The Marauder’s Map has been damaged. Use Reparo to piece it back together!
 attribution: Written by M4n3l(https://ctfd.io)
 value: {{easy}}
+submit: drive
 type: standard
 topics:
   - photoshop
