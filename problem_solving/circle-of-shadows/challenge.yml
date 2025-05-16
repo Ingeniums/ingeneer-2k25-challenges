@@ -37,13 +37,13 @@ description: |
   **Flag Format:**
   The flag is constructed by concatenating the resulting numbers and putting them inside `1ng3neer2k25{}`
 attribution: "Written by [hxuu](https://hxuu.github.io/blog)"
-value: {{difficulty}}
+value: {{hard}}
 type: standard
 flags:
   - "1ng3neer2k25{2687976584844526762}"
 tags:
   - "hard"
-  - "author"
+  - "hxuu"
   - "{{category}}"
   - "pure logic"
 hints:
