@@ -2,7 +2,7 @@ name: Snape's Document
 author: "{sirmoncef}"
 category: {{category}}
 description: |
-  A mysterious scroll was recovered from the depths of the Restricted Section. Its contents appear harmless, but something is clearly hidden beneath the surface. A strange pattern keeps repeating... can you unveil the secret Snape left behind? #45hmtyhjklm
+  A mysterious scroll was recovered from the depths of the Restricted Section. Its contents appear harmless, but something is clearly hidden beneath the surface. A strange pattern keeps repeating... can you unveil the secret Snape left behind? <!--#45hmtyhjklm-->
 value: {{medium}}
 type: dynamic
 flags:
