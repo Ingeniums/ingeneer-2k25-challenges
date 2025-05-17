@@ -1,21 +1,7 @@
-<<<<<<< HEAD:networking/warmup-[The Sorting Router]/challenge.yml
-challenge_name: "The Sorting Hat"
-
-author: "th31rtist"
-
-category: "Networking"
-
-difficulty: "easy"
-
-type: "standard"
-
-description: >
-=======
 name: "The Sorting Hat"
 author: "th31rtist"
 category: {{category}}
 description: |
->>>>>>> parent of 8549ba6 (networking challs):networking/The-Sorting-Router/challenge.yml
   Deep within Hogwarts' Chamber of Networks everything runs magically.
   But dark wizards whisper of a way to drain its magic.
   Discover how the dark wizards accomplish this attack so we can protect the castle's network.
