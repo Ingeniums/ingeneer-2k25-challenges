@@ -1,38 +1,9 @@
-First method:
+Challenge means we should test if our routers have neighborhood without testing the show database 
 
-
-In switch one: 
-```
-interface f0/1
-switchport mode access
-switchport access vlan 10
+So we check lldp neighbors because east and west (multiple vendors not only cisco)
 
 ```
-In the second switch:
-
-```
-interface f0/1
-switchport mode access
-switchport access vlan 20
-
+show lldp neighbors
 ```
 
-
-Second method:
-
-
-In switch one: 
-```
-interface f0/1
-switchport trunk native vlan 10
-
-```
-In the second switch:
-
-```
-interface f0/1
-switchport trunk native vlan 20
-
-```
-
-
+so the flag is 1ng3neer2k25{show_lldp_neighbors}

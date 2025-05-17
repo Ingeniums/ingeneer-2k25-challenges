@@ -1,6 +1,6 @@
 challenge_name: "The Switch of Secrets"
 
-author: "th31rtist"
+author: "L4rTiStE"
 
 category: "Networking"
 
@@ -18,11 +18,8 @@ hint: >
 
 flag: "1ng3neer2k25{magic_wand_spell}"
 
-connection_info: >
-  For each network device, you can access and configure a view I created called 'participant'.
-  When you enter a network device, type "enable view participant" and use the password "SuperStrongPassword".
 
-attribution: "Written by th31rtist"
+attribution: "Written by L4rTiStE"
 
 
 
