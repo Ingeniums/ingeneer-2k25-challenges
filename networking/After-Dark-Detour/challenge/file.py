@@ -41,19 +41,16 @@ try:
         # Time-range section
         if not step1_started and step1_start_pattern.match(cmd):
             step1_started = True
-            print("🛠️ Entering time-range DANGER_TIME config...")
 
         elif step1_started and not step1_done:
             if step1_sub_pattern.match(cmd):
                 step1_subcmds.add("periodic")
             if "periodic" in step1_subcmds:
                 step1_done = True
-                print("✅ First step done (time-range set)")
 
         # Route-map 10 section
         elif not route_10_started and route_10_trigger.match(cmd):
             route_10_started = True
-            print("🛠️ Starting Route-map 10 config...")
 
         elif route_10_started and not route_10_completed:
             for key, pattern in route_10_cmds.items():
@@ -62,12 +59,10 @@ try:
             if len(route_10_cmds_entered) == len(route_10_cmds):
                 route_10_completed = True
                 route_10_started = False
-                print("✅ Route-map 10 configured")
 
         # Route-map 20 section
         elif not route_20_started and route_20_trigger.match(cmd):
             route_20_started = True
-            print("🛠️ Starting Route-map 20 config...")
 
         elif route_20_started and not route_20_completed:
             for key, pattern in route_20_cmds.items():
@@ -76,7 +71,6 @@ try:
             if len(route_20_cmds_entered) == len(route_20_cmds):
                 route_20_completed = True
                 route_20_started = False
-                print("✅ Route-map 20 configured")
 
         # Final flag
         if step1_done and route_10_completed and route_20_completed and not final_flag_shown:
