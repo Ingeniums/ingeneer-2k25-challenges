@@ -1,4 +1,4 @@
-challenge_name: "Magic Bonds"
+challenge_name: "Break_a_rule"
 
 author: "L4rTiStE"
 
@@ -9,13 +9,11 @@ difficulty: "hard"
 type: "standard"
 
 description: >
-  In our magical City, castles and wizards from every corner of the earth—east and west—stand tall, and all neighbors live together in harmony, united by unbreakable magical bonds. But from time to time, we wonder: Are these bonds as strong as they seem? How can we put them to the test?
-  Note: flag is 1ng3neer2k25{command} with underscore between words.
+  You are in PC1(you use linux btw), what's one command you could type to talk to the other pc who has ip address 192.168.1.12 despite the barrier?
 
+hint: ""
 
-hint: "You don't know more details than that, so lower your thoughts"
-
-flag: "1ng3neer2k25{show_lldp_neighbors}"
+flag: "1ng3neer2k25{r0ut3rs_sh0uldnt_b3_th1t_h3lpful}"
 
 
 

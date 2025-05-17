@@ -1,9 +1,7 @@
-Challenge means we should test if our routers have neighborhood without testing the show database 
-
-So we check lldp neighbors because east and west (multiple vendors not only cisco)
+the issue is in proxy arp which is activated by default 
+so the command is 
 
 ```
-show lldp neighbors
-```
+ip route add 192.168.1.12/32 via 192.168.1.1
 
-so the flag is 1ng3neer2k25{show_lldp_neighbors}
+```
