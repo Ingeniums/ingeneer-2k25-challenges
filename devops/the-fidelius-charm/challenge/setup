@@ -1,0 +1,65 @@
+#!/bin/bash
+
+docker container rm -f docker
+echo "Starting container..."
+docker run --privileged -d --name docker docker:28.1.1-dind-alpine3.21
+
+MAX_WAIT=60
+INTERVAL=2
+ELAPSED=0
+
+echo "Waiting for Docker daemon to start..."
+
+while [ $ELAPSED -lt $MAX_WAIT ]; do
+  # Check if the Docker daemon is running by attempting to get Docker info
+  if docker exec docker docker info >/dev/null 2>&1; then
+    echo "Docker daemon is up and running!"
+    break
+  else
+    echo "Docker daemon not ready yet, retrying in $INTERVAL seconds..."
+    sleep $INTERVAL
+    ELAPSED=$((ELAPSED + INTERVAL))
+  fi
+done
+
+read -p "Regenrated /var/logs [y/n]: " folder_answer
+if [ "$folder_answer" == "y" ]; then
+    echo "Creating dummy folders..."
+    rm -r ./var/logs/*
+    volume_path="$(python generator.py var/logs/ | sed "s|$(pwd)/var/logs/||g")"
+    echo $volume_path > path
+    
+    echo "Removing dummy files..."
+    rm ./var/logs/$volume_path/*
+    docker cp ./var/logs docker:/var/
+fi
+
+read -p "Update story [y/n]: " story_answer
+if [ "$story_answer" == "y" ]; then
+    echo "Copying story..."
+    docker cp ./story.md docker:/
+fi
+
+read -p "Update compose.yaml [y/n]: " compose_answer
+if [ "$compose_answer" == "y" ]; then
+    echo "Launching containers..."
+    docker cp ./compose.yaml docker:/
+    docker exec -it docker docker compose -f /compose.yaml up -d
+    echo "Done launching containers..."
+fi
+
+if [ "$folder_answer" == "y" ]; then
+    echo "Create a volume using:"
+    docker exec -it docker docker run -e API_KEY=1b58b88b2cb64316b2f4e631154d6eb1 \
+        -e SECRET=Th1s_1s_4_Pr1m4ry_Qy3a6bEDTygrcLcwf5cwcilXVBGZMYCa6l537eARP55f1g80CfThwXGEaDivJ2EQ \
+        -e SECRET2=sSWKQqfbsf7gAI1yUcKwHqB8VadaI0fjnvyUI5mQeyVrlKENdjS9yoaFt5jHn3y3 \
+        -v /var/logs/$volume_path:/var/logs \
+        --name caller -d ymerzouka/fidelius-charm-caller:latest
+
+    echo "Getting container information..."
+    sleep 8
+    docker exec docker docker inspect caller > ./caller/info
+    cp ./caller/info ../files/
+    docker exec docker docker container rm -f caller
+fi
+

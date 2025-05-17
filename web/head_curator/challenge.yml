@@ -1,73 +1,18 @@
-name: "Head Curator"
-# there is no way to display the name in the template so add name to tags
-author: "1nitramfs"
-category: web # web, reverse, crypto, design, networking, ai, devops, problem solving
+name: Head Curator
+author: 1nitramfs
+category: {{category}}
 description: |
   Your discovery in the House of Spells led you to a sealed ledger tucked behind a shifting bookcase — a record of magical artifacts recently "submitted" to the castle's archives. Curiously, the entries weren't logged by professors, but by the Head Curator.
-
-# can be omitted
 attribution: Written by [1nitramfs](https://github.com/Mehloul-Mohamed/)
-# use the difficulty of the challenge as a value, eg: {{easy}}, {{medium}}, ...
-value: {{difficulty}}
-# don't change it, at least for now
+value: {{easy}}
 type: standard
-
-# Specify a protocol that should be used to connect to the running image
-# For example if the image is a website you can specify http or https
-# Otherwise you can specify tcp
-protocol: null
-
-# info on how to connect to a challenge, use {{port}} for port, and {{host}} for host
-connection_info: nc {{host}} {{port}}
-
-# Flags specify answers that your challenge use. You should generally provide at least one.
-# Can be removed if unused
-# Accepts strings or dictionaries of CTFd API data
+protocol: http
+connection_info: "{{url}}"
 flags:
-    # A static case sensitive flag
-    # - 1ng3neer2k25{D0n7_rEu$e_N0uNc3s_br0}
-    # A static case sensitive flag created with a dictionary
-    - {
-        type: "static",
-        content: "1ng3neer2k25{Y4ml_Y0uR_w4y_1n}",
-    }
-    # # A static case insensitive flag
-    # - {
-    #     type: "static",
-    #     content: "flag{wat}",
-    #     data: "case_insensitive",
-    # }
-
-# Topics are used to help tell what techniques/information a challenge involves
-# They are generally only visible to admins
-# Accepts strings
-topics:
-    -
-
-# difficulty, author, category, may be other things you see fit
+  - 1ng3neer2k25{Y4ml_Y0uR_w4y_1n}
 tags:
-    - web
-    - Easy
-
-# Provide paths to files from the same directory that this file is in
-files:
-    - challenge/*
-
-# Hints are used to give players a way to buy or have suggestions. They are not
-# required but can be nice.
-# Can be removed if unused
-# hints:
-#     - {
-#         content: "This hint costs points",
-#         cost: 10
-#     }
-#     - This hint is free
-
-# The state of the challenge.
-# If the field is omitted, the challenge is visible by default.
-# If provided, the field can take one of two values: hidden, visible.
+  - {{category}}
+  - easy
+  - 1nitramfs
 state: hidden
-
-# Specifies what version of the challenge specification was used.
-# Subject to change until ctfcli v1.0.0
 version: "0.1"
