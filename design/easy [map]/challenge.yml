@@ -1,0 +1,20 @@
+name: "Reparo"
+author: "Dahoun Manel"
+category: design
+description: The Marauder’s Map has been damaged. Use Reparo to piece it back together!
+attribution: Written by M4n3l(https://ctfd.io)
+value: 100
+difficulty: "easy"
+type: standard
+topics:
+  - design
+tags:
+  - photoshop
+  - figma
+  - illustrator
+files:
+  - dist/source.py
+hints:
+  - Some pieces may still be hiding—seek them elsewhere to make it whole again.
+
+version: "0.1"

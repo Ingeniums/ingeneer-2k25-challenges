@@ -1,7 +1,3 @@
-# IMPORTANT
-Use the provided prompt `prompt.md` with deepseek (no deepthink) to generate challenge.yml.
-Just verify the flag.
-
 # File structure
 - Add your challenge to its corresponding category
 - Create a folder corresponding to the name of your challenge prefixed with difficulty, eg: `easy - [challenge Name]`
@@ -14,14 +10,14 @@ Just verify the flag.
 - Solution should be under `solution/` folder
 # Example
 ```bash
-.
-├── challenge
-│   ├── compose.yaml
-│   └── Dockerfile
+easy-Sample/
+├── solution
 ├── challenge.yml
-├── files
-│   └── file1.txt
-└── solution
+└── challenge
+    ├── files
+    │   ├── file2.txt
+    │   └── file1.txt
+    └── Dockerfile
 ```
 
 # Authors
@@ -38,5 +34,6 @@ Just verify the flag.
 | Mehloul-Mohamed   | Web(1 warmup, 1 easy, 1 hard, 1 tough), DevOps(1 warmup, 1 easy) |
 | sirmoncef         | Forensics(All), Web(1 easy, 2 medium)                 |
 | MoncifT4F0        | Problem Solving                                      |
+| SenhadjiMSaid     | AI(All)                                              |
 # Flag
 `1ng3neer2k25{flag}`

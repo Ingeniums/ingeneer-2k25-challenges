@@ -1,0 +1,19 @@
+name: "Lumos"
+author: "Dahoun Manel"
+category: design
+description: A dark charm has clouded this image. Use the Lumos charm to bring it back into the light.
+attribution: Written by M4n3l(https://ctfd.io)
+value: 100
+difficulty: "warmup"
+type: standard
+topics:
+  - design
+tags:
+  - photoshop
+files:
+  - dist/source.py
+hints:
+  - "Light alone is not enough—bring back the colors too.",
+   
+
+version: "0.1"

@@ -1,0 +1,18 @@
+name: "Polyjuice Potion"
+author: "Dahoun Manel"
+category: design
+description: In the dim corridors of Hogwarts, nothing is ever quite as it seems. Something—or someone—stands where it shouldn’t, yet blends in as if born of the scene itself.
+attribution: Written by M4n3l(https://ctfd.io)
+value: 100
+difficulty: "medium"
+type: standard
+topics:
+  - design
+tags:
+  - design
+files:
+  - dist/source.py
+hints:
+  - Even Polyjuice needs precision—placement, lighting, and shadows must whisper the same story.
+
+version: "0.1"

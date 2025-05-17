@@ -1,1 +1,0 @@
-flag = b'1ng3neer2k25{Ah_Percy_IG_You_Was_Extremely_Serious_This_Time_As_Usual}'
