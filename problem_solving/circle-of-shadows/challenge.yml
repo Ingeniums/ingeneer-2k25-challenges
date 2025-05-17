@@ -1,0 +1,48 @@
+name: "Circle of Shadows"
+author: "hxuu"
+category: {{category}}
+description: |
+  In a secret Defense Against the Dark Arts exercise, `N` apprentice wizards are arranged in a circle by Professor Lupin.
+
+  > "At least one of you is marked by a dark enchantment."
+
+  Says Professor Lupin.
+
+  Everyone looks around, magically examining every other wizard robe, but not their own.
+
+  Professor Lupin continues:
+
+  > "If you are certain that your robe is marked, step forward."
+
+  No wizard steps forward.
+
+  Professor Lupin repeats himself a second time:
+
+  > "If you are certain that your robe is marked, step forward."
+
+  No one again... He proceeds to repeat himself **k-times**,
+  facing the same answer. The **(k+1)st-time** is different though, and those in doubt finally stepped.
+
+  How many wizards are marked?
+
+  **Input Format:**
+  * The first line contains a single integer: N - the number of wizards
+  * The second line contains a single integer: K - the number of repetitions
+
+  **Output Format:**
+  * A single integer: the number of marked wizards
+
+  > The flag is constructed by concatenating the resulting numbers and putting them inside `1ng3neer2k25{}`
+attribution: "Written by [hxuu](https://hxuu.github.io/blog)"
+value: {{hard}}
+type: standard
+flags:
+  - "1ng3neer2k25{2687976584844526762}"
+tags:
+  - "hard"
+  - "{{category}}"
+  - "pure logic"
+hints:
+  - "Ever heard of knowledge?"
+state: visible
+version: "1.0"

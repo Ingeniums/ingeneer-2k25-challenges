@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  {{category}}_{{name}}_ssh-server:
+    build: {{src}}/challenge/ssh-server
+    ports:
+      - "{{hostPort}}:22"
+    networks:
+      private_net:
+        ipv4_address: 172.90.0.3  
+        
+  internal-web:
+    build: {{src}}/challenge/internal-web
+    expose:
+      - "80"
+    networks:
+      private_net:
+        ipv4_address: 172.90.0.2   
+
+networks:
+  private_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.90.0.0/16

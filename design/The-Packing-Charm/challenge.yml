@@ -1,0 +1,19 @@
+name: The Packing Charm
+author: Dahoun Manel
+category: {{category}}
+description: |
+  Pages from an enchanted tome have been scrambled by a mischievous charm. Nothing is where it should be, yet every piece yearns to return home.
+value: {{medium}}
+type: standard
+submit: drive
+tags:
+  - medium
+  - Dahoun Manel
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by M4n3l(https://ctfd.io)
+topics:
+  - design
+hints:
+  - The fragments remember where they belong—look closely at borders, colors, and hidden connections.

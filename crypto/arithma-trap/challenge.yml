@@ -1,0 +1,27 @@
+name: The ArithmaTrap
+author: Yasser
+category: {{category}}
+description: |
+  Ah, Percy Weasley... you want the secret?
+  Too bad—it's hidden deep inside The ArithmaTrap.
+  An ancient number game with just one way out.
+  
+  You’ll need sharp eyes, fast thinking, and maybe a bit of luck (or a wand).
+  The numbers are waiting.
+  After all , we are Weasleys' Wizard Wheezes.
+
+value: {{warmup}}
+connection_info: nc {{host}} {{port}}
+type: dynamic
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{Ah_Percy_IG_You_Was_Extremely_Serious_This_Time_As_Usual}"
+    }
+tags:
+  - warmup 
+  - Yasser
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by koyphshi

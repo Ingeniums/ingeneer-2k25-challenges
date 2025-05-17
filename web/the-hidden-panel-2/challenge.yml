@@ -1,0 +1,27 @@
+name: "The Hidden Panel 2"
+author: "ilyes_haddad_"
+category: {{category}}
+description: |
+  You've tunneled your way past the castle's defenses and found yourself before an ancient spellbook - bound in dragonhide, humming with suppressed magic.
+  This time it's not just about "finding" anymore... it's about "breaking the spells" using deep magic.
+  The pages tremble at your whispers, but something feels wrong... The magic has been tampered with. Wards have been placed over the text, protecting the castle's greatest secrets from prying eyes.
+
+  Those who know the old ways - the forgotten languages of the Founders - may still find a crack in the armor.
+  A well-placed incantation might cause the spellbook to betray its secrets, revealing truths buried even from the wisest of wizards.
+
+  "Powerful magic it is, to bend a spell to your will... but dangerous, too."
+
+  The true flag lies not in the spells written before you, but in the spellbook's very heart - hidden from sight, protected by ancient, flawed magic.
+value: {{medium}}
+type: standard
+protocol: ssh
+connection_info: ssh -o IdentitiesOnly=yes -o PreferredAuthentications=password ctfplayer@{{host}} -p {{port}}
+flags:
+  - 1ng3neer2k25{th4t_was_tough_ssti_with_ssh_tunn3ll1ng}
+tags:
+  - medium
+  - ilyes_haddad_
+  - {{category}}
+attribution: Written by [ilyes_haddad_](https://ilyeshaddad.com/)
+state: hidden
+version: "0.1"

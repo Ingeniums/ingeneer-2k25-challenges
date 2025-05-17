@@ -1,0 +1,19 @@
+name: Polyjuice Potion
+author: Dahoun Manel
+category: {{category}}
+description: |
+  In the dim corridors of Hogwarts, nothing is ever quite as it seems. Something—or someone—stands where it shouldn’t, yet blends in as if born of the scene itself.
+value: {{medium}}
+type: standard
+submit: drive
+tags:
+  - medium
+  - Dahoun Manel
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by M4n3l(https://ctfd.io)
+topics:
+  - design
+hints:
+  - Even Polyjuice needs precision—placement, lighting, and shadows must whisper the same story.
