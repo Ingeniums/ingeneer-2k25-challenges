@@ -1,4 +1,4 @@
-# #!/bin/bash
+#!/bin/bash
 
 # # Configuration flags
 # check_requirements() {
