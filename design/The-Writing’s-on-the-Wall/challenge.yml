@@ -1,0 +1,27 @@
+name: " The Writing’s on the Wall"
+author: "Dahoun Manel"
+category: {{category}}
+description: |
+  Deep within the Room of Requirement, glowing names shimmer on ancient stone — remnants of Dumbledore’s Army. Add yours to the wall… if you dare.
+
+attribution: Written by M4n3l(https://ctfd.io)
+value: {{warmup}}
+submit: drive
+type: standard
+
+topics:
+  - design
+tags:
+  - typography
+  - glow
+  - visual
+  - magic
+  - branding
+  - {{category}}
+  - Dahoun Manel
+
+state: hidden
+hints:
+  - Use the iconic Harry Potter font and match the glowing enchantment seen in the image. Let your team name shine like a spell on the wall.
+
+version: "0.1"

@@ -1,0 +1,18 @@
+name: Expecto Patronum
+author: Dahoun Manel
+category: {{category}}
+description: |
+    In the shadowed glade where Dementors prowl, only the purest light can drive them away. 
+    Channel your happiest memory and conjure a Patronus to protect what matters most.
+value: {{medium}}
+type: standard
+submit: drive
+tags:
+  - medium
+  - Dahoun Manel
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by M4n3l(https://ctfd.io)
+topics:
+  - design

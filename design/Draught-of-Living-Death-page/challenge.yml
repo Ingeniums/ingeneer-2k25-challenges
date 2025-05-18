@@ -1,0 +1,23 @@
+name: " Draught of Living Death page"
+author: "Dahoun Manel"
+category: {{category}}
+description: |
+  A torn page from the **Draught of Living Death** potion book has been found, but it's incomplete. 
+  To restore the lost knowledge, you must carefully reconstruct the page as it once was. 
+  Only the most attentive potion-makers can recover what’s been lost in time.
+
+attribution: Written by M4n3l(https://ctfd.io)
+value: {{easy}}
+submit: drive
+type: standard
+
+topics:
+  - design
+tags:
+  - visual
+  - reconstruction
+  - Dahoun Manel
+
+state: hidden
+
+version: "0.1"

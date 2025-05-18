@@ -1,13 +1,13 @@
-name: Lumos
+name: Signum Revelio
 author: Dahoun Manel
 category: {{category}}
 description: |
-  A dark charm has clouded this image. Use the Lumos charm to bring it back into the light.
-value: {{warmup}}
+  Your Hogwarts invitation is incomplete without the Headmaster's signature. But it's no simple task—it has been hidden, waiting to be extracted from an old, enchanted letter. Only by revealing and transferring the signature can you gain access to the magical world.
+value: {{medium}}
 submit: drive
 type: standard
 tags:
-  - warmup
+  - medium
   - Dahoun Manel
   - {{category}}
 state: hidden
@@ -15,5 +15,4 @@ version: "0.1"
 attribution: Written by M4n3l(https://ctfd.io)
 topics:
   - design
-hints:
-  - Light alone is not enough—bring back the colors too.
+
