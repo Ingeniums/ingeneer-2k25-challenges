@@ -1,4 +1,4 @@
-#!/bin/bash
+# #!/bin/bash
 
 # # Configuration flags
 # check_requirements() {
@@ -236,7 +236,7 @@
 #       ;;
 #   esac
 # done
-
+#!/bin/bash
 
 # Configuration flags
 check_requirements() {
