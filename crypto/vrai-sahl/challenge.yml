@@ -3,7 +3,7 @@ author: Yasser
 category: {{category}}
 description: |
   ana mn djbel lw7ch 
- value: {{hard}}
+value: {{hard}}
 type: standard
 flags:
   - {
