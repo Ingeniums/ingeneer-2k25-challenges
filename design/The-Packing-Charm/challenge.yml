@@ -17,3 +17,7 @@ topics:
   - design
 hints:
   - The fragments remember where they belong—look closely at borders, colors, and hidden connections.
+  - {
+      content: "https://drive.google.com/drive/folders/1Cvrv22Os2CBvyYUrDAa0o088yXeHhxLu?usp=drive_link",
+      cost: 100
+    }
