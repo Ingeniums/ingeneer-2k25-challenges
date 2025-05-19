@@ -1,0 +1,19 @@
+name: vrai sahl  
+author: Yasser
+category: {{category}}
+description: |
+  ana mn djbel lw7ch 
+ value: {{hard}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{mix_of_challz_from_a_crazed_mind}",
+    }
+tags:
+  - hard
+  - Yasser
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by koyphshi
