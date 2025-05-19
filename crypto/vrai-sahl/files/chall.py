@@ -2,76 +2,75 @@ from Crypto.Util.number import *
 from random import *
 from sage.all import *
 
-def get_custom_prime():
+def generate_custom_prime():
     while True:
-        sikurite = str(getRandomNBitInteger(140)).encode().hex()[2:]
-        m3lomatiya= hex(getRandomNBitInteger(100))[2:]
-        combined = m3lomatiya + sikurite
-        candidate = int(combined, 16)
+        suffix = str(getRandomNBitInteger(140)).encode().hex()[2:]
+        prefix = hex(getRandomNBitInteger(100))[2:]
+        candidate = int(prefix + suffix, 16)
         if isPrime(candidate):
             return candidate
 
-def load_flag():
+def get_flag_value():
     with open("flag.txt", "rb") as f:
         return bytes_to_long(f.read().strip())
 
-def elliptic_curve_setup(flag_integer):
-    prime_p = getPrime(512)
-    prime_q = getPrime(512)
-    modulus_n = prime_p * prime_q
+def elliptic_curve_encrypt(flag_val):
+    p = getPrime(512)
+    q = getPrime(512)
+    modulus = p * q
 
-    y_coord = randint(0, modulus_n - 1)
-    curve_a = randint(1, modulus_n)
-    curve_b = (y_coord**2 - (flag_integer**3 + curve_a * flag_integer)) % modulus_n
+    y = randint(0, modulus - 1)
+    a = randint(1, modulus)
+    b = (y**2 - (flag_val**3 + a * flag_val)) % modulus
 
-    curve = EllipticCurve(Zmod(modulus_n), [curve_a, curve_b])
-    base_point = curve(flag_integer, y_coord)
-    double_point = 2 * base_point
+    curve = EllipticCurve(Zmod(modulus), [a, b])
+    base = curve(flag_val, y)
+    result_point = 2 * base
 
-    encrypted_message = pow(bytes_to_long(b'ANA M9WD'), 0x10001, modulus_n)
-
-    return {
-        "a": curve_a,
-        "b": curve_b,
-        "point": double_point.xy(),
-        "n": modulus_n,
-        "ciphertext": encrypted_message
-    }
-
-def rsa_dh_setup(flag_integer, ecc_modulus_n):
-    prime_P = get_custom_prime()
-
-    prime_Q = get_custom_prime()
-    rsa_modulus_N = prime_P * prime_Q
-
-    base_g = 2
-    dh_public_key = pow(flag_integer+prime_P, 0x10001, ecc_modulus_n)
-
-    rsa_encrypted = pow(bytes_to_long(b'ANA CHIKOUR'), 0x10001, rsa_modulus_N)
+    encrypted = pow(bytes_to_long(b'ANA M9WD'), 0x10001, modulus)
 
     return {
-        "N": rsa_modulus_N,
-        "G": dh_public_key,
-        "C": rsa_encrypted
+        "a": a,
+        "b": b,
+        "point": result_point.xy(),
+        "modulus": modulus,
+        "ciphertext": encrypted
     }
 
-def save_results(ecc_data, rsa_dh_data):
-    with open("ecc_output.txt", "w") as f:
+def hybrid_encrypt(flag_val, ecc_modulus):
+    P = generate_custom_prime()
+    Q = generate_custom_prime()
+    rsa_modulus = P * Q
+
+    pub = pow(flag_val + P, 0x10001, ecc_modulus)
+
+    rsa_ciphertext = pow(bytes_to_long(b'ANA CHIKOUR'), 0x10001, rsa_modulus)
+
+    return {
+        "rsa_modulus": rsa_modulus,
+        "pub": pub,
+        "ciphertext": rsa_ciphertext
+    }
+
+def save_all(ecc_data, hybrid_data):
+    with open("ecc_info.txt", "w") as f:
         f.write(f"a = {ecc_data['a']}\n")
         f.write(f"b = {ecc_data['b']}\n")
         f.write(f"point = {ecc_data['point']}\n")
-        f.write(f"n = {ecc_data['n']}\n")
+        f.write(f"modulus = {ecc_data['modulus']}\n")
         f.write(f"ciphertext = {ecc_data['ciphertext']}\n")
 
-    with open("rsa_dh_output.txt", "w") as f:
-        f.write(f"N = {rsa_dh_data['N']}\n")
-        f.write(f"G = {rsa_dh_data['G']}\n")
-        f.write(f"C = {rsa_dh_data['C']}\n")
+    with open("rsa_info.txt", "w") as f:
+        f.write(f"rsa_modulus = {hybrid_data['rsa_modulus']}\n")
+        f.write(f"pub = {hybrid_data['pub']}\n")
+        f.write(f"ciphertext = {hybrid_data['ciphertext']}\n")
 
 def main():
-    flag_integer = load_flag()
-    ecc_data = elliptic_curve_setup(flag_integer)
-    rsa_dh_data = rsa_dh_setup(flag_integer, ecc_data["n"])
-    save_results(ecc_data, rsa_dh_data)
+    flag_val = get_flag_value()
+    ecc_data = elliptic_curve_encrypt(flag_val)
+    hybrid_data = hybrid_encrypt(flag_val, ecc_data["modulus"])
+    save_all(ecc_data, hybrid_data)
 
 main()
+
+
