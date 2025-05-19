@@ -7,6 +7,8 @@ description: |
   Rumors among the Order say that some clever wizards thinking outside the box have tunneled their way through forgotten paths, exposing secrets never meant for Muggle eyes. If such a place does exist... you may need to bend the rules of magic to uncover it.
   The true flag lies not in what you can see, but in what you're willing to reveal.
   "Dobby knows of such a room, sir... A Room that appears when one is in great need... and it hides itself well."
+  ssh password: ctfpassword
+
 value: {{easy}}
 type: standard
 protocol: ssh

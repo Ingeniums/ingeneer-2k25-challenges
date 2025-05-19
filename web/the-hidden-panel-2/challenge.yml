@@ -12,6 +12,8 @@ description: |
   "Powerful magic it is, to bend a spell to your will... but dangerous, too."
 
   The true flag lies not in the spells written before you, but in the spellbook's very heart - hidden from sight, protected by ancient, flawed magic.
+  ssh password: ctfpassword
+
 value: {{medium}}
 type: standard
 protocol: ssh
