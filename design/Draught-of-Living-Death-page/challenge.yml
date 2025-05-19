@@ -1,0 +1,25 @@
+name: " Draught of Living Death page"
+author: "Dahoun Manel"
+category: {{category}}
+description: |
+  A crucial page from the Draught of Living Death potion book has gone missing—vanished without a trace.  
+  To recover this ancient knowledge, you must recreate the page exactly as it once appeared.  
+  Only a true potion master can restore what time and magic have erased.
+
+attribution: Written by M4n3l(https://ctfd.io)
+value: {{easy}}
+submit: drive
+type: standard
+
+topics:
+  - design
+tags:
+  - potion
+  - visual
+  - reconstruction
+  - creativity
+  - Dahoun Manel
+
+state: hidden
+
+version: "0.1"
