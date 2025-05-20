@@ -17,7 +17,6 @@ class Graph:
         self.add_world(world1)
         self.add_world(world2)
 
-        # Avoid duplicate connections with same label
         if (world2, label) not in self.adjacency_list[world1]:
             self.adjacency_list[world1].append((world2, label))
         if (world1, label) not in self.adjacency_list[world2]:
@@ -49,75 +48,66 @@ class Graph:
             print(f"{world}: {self.adjacency_list[world]}")
 
 
-# Initial setup for the Muddy Children Puzzle.
 def enumerate_possible_worlds(A, B, X, Y):
     g = Graph()
 
-    # After the first announcements, all the worlds where a+b != x or y will be deleted
-    # the format is A-B
-    worlds = [
-        (A,Y-A),
-        (A,X-A),
-        (Y-B,B),
-        (X-B,B),
-    ]
-    worlds = list(set(worlds))
+    possible_worlds = set()
+    for T in [X, Y]:
+        for a in range(T + 1):
+            b = T - a
+            if b >= 0:
+                possible_worlds.add((a, b))
 
-    # Add possible worlds to the graph
-    for world in worlds:
+
+    for world in possible_worlds:
         g.add_world(world)
 
-    # Add connections between worlds where exactly one position differs (those are equivalent to the other party)
+    worlds = list(possible_worlds)
     for i in range(len(worlds)):
         for j in range(i + 1, len(worlds)):
             w1, w2 = worlds[i], worlds[j]
-
-            # Check if they differ in exactly one position
             diff_indices = [idx for idx, (a, b) in enumerate(zip(w1, w2)) if a != b]
             if len(diff_indices) == 1:
                 idx = diff_indices[0]
-                # Label is the other person's perspective (1-based)
                 label = 'B' if idx == 0 else 'A'
                 g.add_connection(w1, w2, label)
-    # g.print_graph()
-    # exit()
 
     return g
 
 
-def handle_public_announcements(graph):
-    """
-    Process public announcements that remove worlds from the graph.
-
-    Parameters:
-    - graph: Graph object representing possible worlds.
-    """
-
-    # graph.print_graph()
-    # exit()
+c = 1
+def handle_public_announcements(graph, A, B, X, Y):
     nights_needed = 1
-    for _ in range(30): # 30 here is just a placeholder because i believe we won't reach night 30
+    atleast = 0
+    upto = Y
+    delta = Y - X
+
+    for _ in range(30):
         if not graph.adjacency_list:
-            print("No worlds left, logic contradiction or puzzle solved.")
+            print(f"{c}: No worlds left, logic contradiction or puzzle solved.")
             break
 
-        # check if a player knows the what the other sees
-        actual_worlds = []
+        potential_worlds = []
         for world, neighbors in graph.adjacency_list.items():
             playerA_knows, playerB_knows = False, False
 
-            # Player A tries to know B's count
+            # Player A tries to know B's count - A's actual state is world[0]
             status_set_A = set()
-            status_set_A.add(world[1])  # B's count in this world
+            status_set_A.add(world[1])
             for neighbor, edge_label in neighbors:
                 if edge_label == 'A':
                     status_set_A.add(neighbor[1])
             if len(status_set_A) == 1:
                 playerA_knows = True
 
-            # Player B tries to know A's count
+            # Question to the ai: if i change the graph right here and now,
+            # will i affect further calculations??
+            # It seems like this is the only right option, because when the first answers/refrain from answering
+            # the other immediately knows something (gets the feedback)
+
+            # Player B tries to know A's count - B's actual state is world[1]
             status_set_B = set()
-            status_set_B.add(world[0])  # A's count in this world
+            status_set_B.add(world[0])
             for neighbor, edge_label in neighbors:
                 if edge_label == 'B':
                     status_set_B.add(neighbor[0])
@@ -125,23 +115,22 @@ def handle_public_announcements(graph):
                 playerB_knows = True
 
             if playerA_knows or playerB_knows:
-                actual_worlds.append(world)
+                potential_worlds.append(world)
 
-        if actual_worlds:
-            print(f"Declaration possible on night {nights_needed}")
-            break
+        if (A, B) in potential_worlds:
+            print(f"{c}: Declaration possible on night {nights_needed}")
+            return str(nights_needed)
+
+        for to_remove in potential_worlds:
+            a, b = to_remove
+            # collect all worlds where first == a or second == b
+            worlds_to_remove = [w for w in graph.adjacency_list if w[0] == a or w[1] == b]
+            for w in worlds_to_remove:
+                graph.remove_world(w)
 
         nights_needed += 1
 
-def count_muddy_children(graph):
-    muddy_counts = set()
-
-    for world in graph.adjacency_list:
-        muddy_count = world.count('d')
-        muddy_counts.add(muddy_count)
-
-    assert len(muddy_counts) == 1, f"Inconsistent muddy children counts across worlds: {muddy_counts}"
-    return muddy_counts.pop()
+    return "-1"  # Should not happen unless contradictory input
 
 
 if __name__ == "__main__":
@@ -156,7 +145,10 @@ if __name__ == "__main__":
         A, B = int(lines[i].split()[0]), int(lines[i].split()[1])
         X, Y = int(lines[i + 1].split()[0]), int(lines[i + 1].split()[1])
 
-        enumerate_possible_worlds(A, B, X, Y)
+        g = enumerate_possible_worlds(A, B, X, Y)
+        res = handle_public_announcements(g, A, B, X, Y)
+        results.append(res)
+        c += 1
 
-    # Flag format
     print("Flag:", f"1ng3neer2k25{{{''.join(results)}}}")
+
