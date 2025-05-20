@@ -65,6 +65,8 @@ def enumerate_possible_worlds(N):
     # Add possible worlds to the graph
     for world in worlds:
         g.add_world(world)
+    # g.print_graph()
+    # exit()
 
     # Add connections between worlds where <label> perspective is equivalent in both
     for i in range(len(worlds)):
@@ -149,7 +151,7 @@ def count_muddy_children(graph):
 
 
 if __name__ == "__main__":
-    with open("circle-of-shadows.txt") as f:
+    with open("../files/circle-of-shadows.txt") as f:
         lines = [line.strip() for line in f if line.strip()]
 
     assert len(lines) % 2 == 0, "Each scenario must have two lines: N and K."
