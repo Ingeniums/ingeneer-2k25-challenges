@@ -1,0 +1,20 @@
+name: matrix
+author: 4ym3n
+category: {{category}}
+description: |
+    In mathematics, a matrix is a rectangular array or table of numbers, symbols, or expressions, with elements or entries arranged in rows and columns, which is used to represent a mathematical object or property of such an object
+
+value: {{medium}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{polymorphic_elf_selfDecrypting_Through_XOR_Magic}",
+    }
+tags:
+  - medium
+  - flutter
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n

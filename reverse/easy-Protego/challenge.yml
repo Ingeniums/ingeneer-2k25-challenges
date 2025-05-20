@@ -1,0 +1,21 @@
+name: Protego
+author: 4ym3n
+category: {{category}}
+description: |
+  A mysterious binary waits to be unchained. Can you uncover the secrets it holds by linking the clues?
+value: {{medium}}
+type: standard
+protocol: http
+connection_info: "{{url}}"
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{ingeneerisgoodyeahmay}",
+    }
+tags:
+  - medium
+  - ELF
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n
