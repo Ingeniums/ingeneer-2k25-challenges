@@ -1,0 +1,27 @@
+name: lucydice-v0
+author: Alwasmo
+category: {{category}}
+description: |
+  # LuckyDice-v0
+  a intro flutter reverse challenge, should be "easy" O_o       
+  How Dart compiles and packages code remains a mystery to many.       
+  But sometimes, a well-placed const might just light the way to the jackpot. 💡       
+
+  ## Tips
+  - use `genymotion` for the emulation (for the ppl who are new to this) 
+  - looks like my `main.dart` file got leaked. those damn hackers `¯\_(ツ)_/¯`
+  - i decided to re-write [Saif's](https://github.com/Ingeniums/IngeHack-2k25-Challenges/tree/main/reverse/dados) challenge in flutter, Of course, it's not the same challenge but it might help some beginners get started. ofc Java and flutter are two totally different beasts
+
+value: {{easy}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{}",
+    }
+tags:
+  - medium
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by Alwasmo

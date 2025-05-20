@@ -1,0 +1,19 @@
+name: Alohomora  The Mirror of Erised Code
+author: 4ym3n
+category: {{category}}
+description: |
+  The binary whispers lies—what glows like Lumos may be cursed light. Strings shift like vanishing ink, functions slither like serpents. True 'Alohomora' requires seeing through the Mirror of Erised's illusions.
+value: {{warmup}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{x0r_4nd_b4d_s33d}",
+    }
+tags:
+  - warmup
+  - Aymen
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n

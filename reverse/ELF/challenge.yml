@@ -1,0 +1,19 @@
+name: ELF
+author: 4ym3n
+category: {{category}}
+description: |
+  .......
+value: {{easy}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{3x3cut4bl3_L1nk3d_F0rm4t_1s_G00d}",
+    }
+tags:
+  - easy
+  - ELF
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n

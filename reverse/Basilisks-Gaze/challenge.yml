@@ -1,0 +1,19 @@
+name: The Basilisk's Gaze
+author: 4ym3n
+category: {{category}}
+description: |
+  A curious artifact from Borgin and Burkes has found its way into your possession. At first glance, it appears empty - yet something stirs within its enchanted depths. The runes carved along its edges whisper of compression charms and inverted incantations. Many have peered inside, only to find their understanding vanishing before their eyes...
+value: {{warmup}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{hope_you_didnt_run_it_blindly_be_safe}",
+    }
+tags:
+  - warmup
+  - Aymen
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n

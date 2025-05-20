@@ -1,0 +1,24 @@
+name: luckydice-v1
+author: Alwasmo
+category: {{category}}
+description: |
+  # LuckyDice-v1
+  when there are no anchors to guide you... you look for patterns. O_o        
+  ## Tips
+  - i recommend using `genymotion` for the androind emulator
+  - looks like my `main.dart` file got leaked. those damn hackers `¯\_(ツ)_/¯`
+value: {{medium}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{b4s1l1sk_1n_th3_p1p3s}",
+    }
+tags:
+  - medium
+  - Aymen
+  - Taki
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by Alwasmo
