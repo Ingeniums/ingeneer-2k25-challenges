@@ -17,8 +17,8 @@ flags:
     }  
 tags:  
   - medium  
-  - 4ym3n  
   - Mystery  
+  - {{category}}
 state: hidden  
 version: "0.1"  
 attribution: Written by 4ym3n  
