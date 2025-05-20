@@ -1,0 +1,15 @@
+author: phues
+category: {{category}}
+connection_info: https://drive.google.com/file/d/1qlJr1ACAcKAt2sUTCNL2JMZ5h-Zgbyif/view?usp=sharing
+description: Can you solve this puzzle in half a second?
+flags:
+  - Ingeneer{chr0n0_h4ck3r}
+name: Jigsaw Falling Into Place
+state: hidden
+tags:
+  - {{category}}
+  - misc
+  - hard
+type: standard
+value: {{hard}}
+version: "0.1"
