@@ -3,7 +3,7 @@ author: Dahoun Manel
 category: {{category}}
 description: |
   The Marauder’s Map has been damaged. Use Reparo to piece it back together!
-attribution: Written by M4n3l(https://ctfd.io)
+attribution: Written by M4n3l
 value: {{easy}}
 submit: drive
 type: standard
@@ -11,6 +11,8 @@ topics:
   - photoshop
   - figma
   - illustrator
+flags:
+  - 1ng3neer2k25{f1x1ng_th3_unf1x4bl3}
 tags:
   - {{category}}
   - Dahoun Manel

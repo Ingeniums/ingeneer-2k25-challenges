@@ -2,12 +2,14 @@ name: "Nox–Extinguishes light"
 author: "Dahoun Manel"
 category: {{category}}
 description: A Lumos charm gone wrong! Use Nox to dim down and restore Harry memories.
-attribution: Written by M4n3l(https://ctfd.io)
+attribution: Written by M4n3l
 value: {{easy}}
 submit: drive
 type: standard
 topics:
   - photoshop
+flags:
+  - 1ng3neer2k25{d4rkn3ss_r3turns_truth}
 tags:
   - {{category}}
   - easy

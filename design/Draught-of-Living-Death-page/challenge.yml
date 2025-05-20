@@ -6,13 +6,15 @@ description: |
   To recover this ancient knowledge, you must recreate the page exactly as it once appeared.  
   Only a true potion master can restore what time and magic have erased.
 
-attribution: Written by M4n3l(https://ctfd.io)
+attribution: Written by M4n3l
 value: {{easy}}
 submit: drive
 type: standard
 
 topics:
   - design
+flags:
+  - 1ng3neer2k25{p0ti0n_0f_p3rm4n3nt_sl33p}
 tags:
   - potion
   - visual

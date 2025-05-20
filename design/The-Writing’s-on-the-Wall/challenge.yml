@@ -4,11 +4,12 @@ category: {{category}}
 description: |
   Deep within the Room of Requirement, glowing names shimmer on ancient stone — remnants of Dumbledore’s Army. Add yours to the wall… if you dare.
 
-attribution: Written by M4n3l(https://ctfd.io)
+attribution: Written by M4n3l
 value: {{warmup}}
 submit: drive
 type: standard
-
+flags:
+  - 1ng3neer2k25{ch4mb3r_0f_s3cr3ts_0p3n3d}
 topics:
   - design
 tags:

@@ -6,13 +6,15 @@ description: |
 value: {{medium}}
 submit: drive
 type: standard
+flags:
+  - 1ng3neer2k25{h1dd3n_symb0ls_3xp0s3d}
 tags:
   - medium
   - Dahoun Manel
   - {{category}}
 state: hidden
 version: "0.1"
-attribution: Written by M4n3l(https://ctfd.io)
+attribution: Written by M4n3l
 topics:
   - design
 

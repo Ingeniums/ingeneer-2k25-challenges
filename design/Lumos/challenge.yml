@@ -6,13 +6,15 @@ description: |
 value: {{warmup}}
 submit: drive
 type: standard
+flags:
+  - 1ng3neer2k25{l3t_th3r3_b3_l1ght}
 tags:
   - warmup
   - Dahoun Manel
   - {{category}}
 state: hidden
 version: "0.1"
-attribution: Written by M4n3l(https://ctfd.io)
+attribution: Written by M4n3l
 topics:
   - design
 hints:

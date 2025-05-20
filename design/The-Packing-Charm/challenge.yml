@@ -3,16 +3,20 @@ author: Dahoun Manel
 category: {{category}}
 description: |
   Pages from an enchanted tome have been scrambled by a mischievous charm. Nothing is where it should be, yet every piece yearns to return home.
+  If you're short on time or magic, there’s a simple way to ease the challenge — a little help can be obtained at a big cost.
+
 value: {{medium}}
 type: standard
 submit: drive
+flags:
+  - 1ng3neer2k25{c0mpr3ss10_m4x1m4}
 tags:
   - medium
   - Dahoun Manel
   - {{category}}
 state: hidden
 version: "0.1"
-attribution: Written by M4n3l(https://ctfd.io)
+attribution: Written by M4n3l
 topics:
   - design
 hints:
