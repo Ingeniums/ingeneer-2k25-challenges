@@ -1,6 +1,6 @@
 name: "Magic Bonds"
 author: "L4rTiStE"
-category: "{{category}}"
+category: {{category}}
 description: |
   In our magical City, castles and wizards from every corner of the earth—east and west—stand tall, and all neighbors live together in harmony, united by unbreakable magical bonds. But from time to time, we wonder: Are these bonds as strong as they seem? How can we put them to the test?
   Note: flag is 1ng3neer2k25{command} with underscore between words.

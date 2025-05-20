@@ -1,19 +1,17 @@
-challenge_name: "The forgotten spell"
-
+name: "The forgotten spell"
 author: "L4rTiStE"
-
-category: "Networking"
-
-difficulty: "easy"
-
-type: "standard"
-
-description: >  
-  Can you retrieve the secret?  
-
-hint: >
-  "Why can't Godric speak with Helga?"
-
-flag: "1ng3neer2k25{F1D3L1US_CH4RM_BYP4SS3D}"
-
+category: {{category}}
+description: |
+  Can you retrieve the secret?
 attribution: "Written by L4rTiStE"
+value: "{{easy}}"
+type: standard
+flags:
+  - 1ng3neer2k25{F1D3L1US_CH4RM_BYP4SS3D}
+tags:
+  - easy
+  - "{{category}}"
+hints:
+  - "Why can't Godric speak with Helga?"
+state: hidden
+version: "0.1"

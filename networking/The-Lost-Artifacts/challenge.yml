@@ -1,6 +1,6 @@
 name: "The Lost Artifacts"
 author: "L4rTiStE"
-category: "{{category}}"
+category: {{category}}
 description: |
   In an enchanted network connecting the castles of Hogwarts, students were able to communicate and collaborate magically.But dark forces have interfered. Some sinister figures infiltrated the magical network, stealing vital components that kept the system running. Now, the connection between the houses is broken, and the students are isolated. The task is clear: recover what was stolen, so the school can return to its normal magical harmony.
 attribution: "Written by L4rTiStE"

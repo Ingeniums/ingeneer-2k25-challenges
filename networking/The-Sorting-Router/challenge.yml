@@ -1,6 +1,6 @@
 name: "The Sorting Hat"
 author: "L4rTiStE"
-category: "{{category}}"
+category: {{category}}
 description: |
   Deep within Hogwarts' Chamber of Networks everything runs magically.
   But dark wizards whisper of a way to drain its magic.

@@ -1,6 +1,6 @@
 name: "Two_in_one"
 author: "L4rTiStE"
-category: "{{category}}"
+category: {{category}}
 description: |
   Harry is a great wizard, but sometimes he forgets to do important things.
   It's okey, even if you find it you can't do anything with it, Can you ?

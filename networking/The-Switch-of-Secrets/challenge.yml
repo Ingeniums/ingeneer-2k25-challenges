@@ -1,26 +1,20 @@
-challenge_name: "The Switch of Secrets"
-
+name: "The Switch of Secrets"
 author: "L4rTiStE"
-
-category: "Networking"
-
-difficulty: "easy"
-
-type: "standard"
-
-description: >
+category: {{category}}
+description: |
   A magical artifact hides in plain sight among Hogwarts' network devices.
   The secret lies not in spells or runes, but in what the device itself reveals.
-  Note: netcat to the shell and type the right command to see the result you want "type commands fully without abbreviations". 
-
-hint: >
-  "Interfaces speak when properly questioned. What do their mundane details whisper?"
-
-flag: "1ng3neer2k25{magic_wand_spell}"
-
-
+  Note: netcat to the shell and type the right command to see the result you want "type commands fully without abbreviations".
 attribution: "Written by L4rTiStE"
-
-
-
-
+value: "{{easy}}"
+type: standard
+connection_info: "nc {{host}} {{port}}"
+flags:
+  - 1ng3neer2k25{magic_wand_spell}
+tags:
+  - easy
+  - "{{category}}"
+hints:
+  - "Interfaces speak when properly questioned. What do their mundane details whisper?"
+state: hidden
+version: "0.1"

@@ -1,6 +1,6 @@
 name: "Break_a_rule"
 author: "L4rTiStE"
-category: "{{category}}"
+category: {{category}}
 description: |
   You are in PC1(you use linux btw), what's one command you could type to talk to the other pc who has ip address 192.168.1.12 despite the barrier?
 attribution: "Written by L4rTiStE"
