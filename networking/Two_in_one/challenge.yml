@@ -1,0 +1,26 @@
+challenge_name: "Two_in_one"
+
+author: "L4rTiStE"
+
+category: "Networking"
+
+difficulty: "medium"
+
+type: "standard"
+
+description: > 
+  Harry is a great wizard, but sometimes he forgets to do important things.
+  It's okey, even if you find it you can't do anything with it, Can you ?
+  
+hint: > 
+  Not so secret yeah ... but is it that strong ? 
+  Wow ! french scientists in networking ! that's new ! 
+
+
+flag: "1ng3neer2k25{Crypt0_plus_N3tw0rk1ng_3qual5_fr13nd5}"
+
+attribution: "Written by L4rTiStE"
+
+
+
+
