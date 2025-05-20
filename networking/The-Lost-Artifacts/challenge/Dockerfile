@@ -11,4 +11,4 @@ RUN chmod +x /challenge.sh
 EXPOSE 1234
 
 # Use socat to listen on port 1234 and execute challenge.sh for each connection
-CMD ["socat", "TCP-LISTEN:1234,reuseaddr,fork", "EXEC:/challenge.sh"]
+CMD ["socat", "TCP-LISTEN:1234,reuseaddr,fork", "EXEC:bash /challenge.sh,pty,stderr,setsid,sigint,sane"]
