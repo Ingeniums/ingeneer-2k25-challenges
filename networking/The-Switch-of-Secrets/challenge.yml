@@ -8,7 +8,7 @@ description: |
 attribution: "Written by L4rTiStE"
 value: "{{easy}}"
 type: standard
-connection_info: "nc {{host}} {{port}}"
+connection_info: nc {{host}} {{port}}
 flags:
   - 1ng3neer2k25{magic_wand_spell}
 tags:
