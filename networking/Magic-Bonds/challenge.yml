@@ -1,22 +1,18 @@
-challenge_name: "Magic Bonds"
-
+name: "Magic Bonds"
 author: "L4rTiStE"
-
-category: "Networking"
-
-difficulty: "hard"
-
-type: "standard"
-
-description: >
+category: "{{category}}"
+description: |
   In our magical City, castles and wizards from every corner of the earth—east and west—stand tall, and all neighbors live together in harmony, united by unbreakable magical bonds. But from time to time, we wonder: Are these bonds as strong as they seem? How can we put them to the test?
   Note: flag is 1ng3neer2k25{command} with underscore between words.
-
-
-hint: "You don't know more details than that, so lower your thoughts"
-
-flag: "1ng3neer2k25{show_lldp_neighbors}"
-
-
-
 attribution: "Written by L4rTiStE"
+value: "{{hard}}"
+type: standard
+flags:
+  - 1ng3neer2k25{show_lldp_neighbors}
+tags:
+  - hard
+  - "{{category}}"
+hints:
+  - "You don't know more details than that, so lower your thoughts"
+state: hidden
+version: "0.1"
