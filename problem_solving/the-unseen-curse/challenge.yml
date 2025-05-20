@@ -1,0 +1,44 @@
+name: "The Unseen Curse"
+author: "hxuu"
+category: {{category}}
+description: |
+  During a clandestine lesson in the Forbidden Forest, Professor Moody gathers the apprentices for a test of perception and logic.
+
+  > *"Among these ancient trees, some bear the Phantom Mark—a dark sigil invisible to the one who stands beneath it. Each of you will be assigned a tree, but you cannot see your own. Look around: How many marks do you see?"*
+
+  - **Alice** counts **A** marked trees.
+  - **Bob** counts **B** marked trees.
+
+  The total number of marks, **T**, is either **X** or **Y** (X < Y), but neither knows for sure.
+
+  **The Ritual of Declaration:**
+  Each night, the Professor asks the apprentices in turn:
+  > *"Is the true number of marks **X** or **Y**?"*
+
+  If an apprentice can logically deduce the answer, they must declare it at midnight. If not, the ritual repeats.
+
+  **Your Task:**
+  Given **A**, **B**, **X**, and **Y**, determine the **minimum number of nights** before one apprentice can conclusively declare the true count.
+
+  **Input Format:**
+  * Line 1: Two integers **A** and **B** (0 ≤ A, B ≤ 10^9)
+  * Line 2: Two integers **X** and **Y** (1 ≤ X < Y ≤ 10^18)
+
+  **Output Format:**
+  * A single integer: the number of nights required.
+
+  > *The flag is forged from the answers to hidden trials, wrapped in `1ng3neer2k25{}`.*
+
+attribution: "Written by [hxuu](https://hxuu.github.io/blog)"
+value: "hard"
+type: standard
+flags:
+  - "1ng3neer2k25{24812}"
+tags:
+  - "hard"
+  - "{{category}}"
+  - "pure logic"
+hints:
+  - "If Alice and Bob can see each other's markings, but not their own, then how many can they see in total?"
+state: visible
+version: "1.0"
