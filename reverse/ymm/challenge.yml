@@ -12,7 +12,6 @@ flags:
     }
 tags:
   - medium
-  - Aymen
   - {{category}}
 state: hidden
 version: "0.1"

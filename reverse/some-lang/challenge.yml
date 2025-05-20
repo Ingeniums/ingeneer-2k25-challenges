@@ -5,6 +5,8 @@ description: |
   A curious artifact from Borgin and Burkes has found its way into your possession. At first glance, it appears empty - yet something stirs within its enchanted depths. The runes carved along its edges whisper of compression charms and inverted incantations. Many have peered inside, only to find their understanding vanishing before their eyes...
 value: {{warmup}}
 type: standard
+protocol: tcp
+connection_info: nc {{host}} {{port}}
 flags:
   - {
       type: "static",
