@@ -15,7 +15,6 @@ flags:
     }
 tags:
   - web
-  - rev
   - {{category}}
 state: hidden
 version: "0.1"
