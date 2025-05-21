@@ -3,7 +3,7 @@
 
 from reader import *
 
-paths = read_paths_from_file("../files/warding-misalignment.txt")
+paths = read_paths_from_file("./input.txt")
 
 def cross(x1, y1, x2, y2):
     """

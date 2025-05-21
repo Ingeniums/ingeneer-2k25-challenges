@@ -1,0 +1,19 @@
+name: "The Unseen Curse"
+author: "ihaveabananaandimafraidtouseit"
+category: {{category}}
+description: |
+    The elder sage, known for his serene demeanor, once betrayed that calm beneath flickering flames and a chalice’s choice—though chronicles differ, some claim the tempest broke through his usual twilight.
+    **Flag format:** `1ng3neer2k25{sentence with spaces replaced with an underscore - all lowercase}`
+flags:
+  - 1ng3neer2k25{did_you_put_your_name_in_the_goblet_of_fire}
+name: Calm
+attribution: "Written by ihaveabananaandimafraidtouseit"
+state: hidden
+tags:
+  - {{category}}
+  - misc
+  - medium
+type: standard
+value: {{medium}}
+version: "0.1"
+
