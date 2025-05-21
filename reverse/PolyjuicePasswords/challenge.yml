@@ -1,0 +1,20 @@
+name: Polyjuice Passwords
+author: 4ym3n
+category: {{category}}
+description: |
+  A charm-guarded system lies deep within the dungeons. Can you shapeshift into the right identity and unlock its secret?
+value: {{medium}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{running_through_the_subroutines!!}",
+    }
+tags:
+  - easy
+  - reverse
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n
+
