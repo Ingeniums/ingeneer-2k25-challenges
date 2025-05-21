@@ -1,11 +1,13 @@
 name: NotBF
 author: T4k1
 category: {{category}}
+protocol: https
 description: |
   # NotBF
   just a fun "programming lang" i made :)
 value: {{medium}}
 type: standard
+connection_info: "{{url}}"
 flags:
   - {
       type: "static",
