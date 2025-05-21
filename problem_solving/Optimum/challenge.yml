@@ -1,11 +1,11 @@
 name: "Optimum"
-author: "ihaveabananaandamafraidouseit"
+author: "Tarek"
 category: {{category}}
 description: |
   Harry was working on a spell that gives him information about the deatheaters
   but it looks like its a bit unoptimzed even for him,
   Can you make it run ?
-attribution: "Written by Tarek"
+attribution: "Written by ihaveabananaandamafraidouseit"
 value: "{{hard}}"
 type: standard
 flags:
