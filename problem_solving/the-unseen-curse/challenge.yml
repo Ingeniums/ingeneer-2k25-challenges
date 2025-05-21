@@ -12,7 +12,7 @@ description: |
   The total number of marks, **T**, is either **X** or **Y** (X < Y), but neither knows for sure.
 
   **The Ritual of Declaration:**
-  Each night, the Professor asks the apprentices in turn:
+  Each night, the professor asks the apprentices in Turn:
   > *"Is the true number of marks **X** or **Y**?"*
 
   If an apprentice can logically deduce the answer, they must declare it at midnight. If not, the ritual repeats.
@@ -33,7 +33,7 @@ attribution: "Written by [hxuu](https://hxuu.github.io/blog)"
 value: "hard"
 type: standard
 flags:
-  - "1ng3neer2k25{511322412311434132}"
+  - "1ng3neer2k25{5211322412311434132}"
 tags:
   - "hard"
   - "{{category}}"
