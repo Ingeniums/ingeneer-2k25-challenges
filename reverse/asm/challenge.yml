@@ -1,0 +1,19 @@
+name: asm
+author: 4ym3n
+category: {{category}}
+description: |
+  It is our choices, Harry, that show what we truly are... far more than our abilities
+value: {{warmup}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{this_is_a_real_flag_designed_to_be_exactly_one_hundred_bytes_in_length_and_contains_clear_readable_words_separated_by_underscores}",
+    }
+tags:
+  - warmup
+  - 4ym3n
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n
