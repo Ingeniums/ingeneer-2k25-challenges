@@ -1,0 +1,35 @@
+name: "Tracking the Tracks"
+
+author: "{sirmoncef}"
+category: Misc 
+description: i love geoguessing do you ? , flag example  1ng3neer2k25{154,456,-159.200}
+
+
+# can be omitted
+attribution: Written by [{sirmoncef}](https://www.sirmoncef.tech/)
+
+value: 500
+
+type: standard
+
+
+flags:
+   
+    - 1ng3neer2k25{37.273,-79.946}
+   
+
+tags:
+    - Medium
+    - "{sirmoncef}"
+    - Osint
+    - GeoGuessing
+
+
+files:
+    - files/chall.png
+
+
+state: hidden
+
+
+version: "0.1"
