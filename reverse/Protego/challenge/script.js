@@ -7,8 +7,13 @@ let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
 let rightGuessString = WORDS[CORRECT_GUESS];
-
+let realRightGuess;
 function initBoard() {
+    
+    document.addEventListener('resultUpdated', (e) => {
+        realRightGuess = e.detail.resultStr;
+      });
+    
     let board = document.getElementById("game-board");
 
     for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
@@ -107,11 +112,14 @@ function checkGuess () {
     }
     
     if (guessString === rightGuessString) {
-		let flag = '1ng3neer2k25{' + rightGuessString+"}" ;
+    
+		let flag = "Flag is under Fidelius, kiddy. No spell will fetch it." ;
+        if (guessString == realRightGuess) {
+            flag="realRightGuess"
+        }
 		toastr.options.timeOut = 0;
 		toastr.options.onclick = function() {alert(flag);}
         toastr.success('You guessed right! The flag is ' + flag);
-
         guessesRemaining = 0
         return
     } else {

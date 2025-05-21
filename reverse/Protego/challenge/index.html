@@ -63,5 +63,20 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="script.js" type="module"></script>
+<script src="caesar.js"></script>
+  <script>
+    Module.onRuntimeInitialized = function() {
+      const getTargetString = Module.cwrap("get_target_string", "number", []);
+      const freeString = Module.cwrap("free_string", "void", ["number"]);
+      const resultPtr = getTargetString();
+
+      // Convert the returned pointer to a JS string
+      const resultStr = Module.UTF8ToString(resultPtr);
+      document.dispatchEvent(new CustomEvent('resultUpdated', {
+      detail: { resultStr }
+    }));
+  };
+
+  </script>
 </body>
 </html>
