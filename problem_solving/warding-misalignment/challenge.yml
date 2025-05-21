@@ -1,0 +1,39 @@
+name: "Warding Misalignment"
+author: "hxuu"
+category: {{category}}
+description: |
+  In your final Defense Against the Dark Arts practical exam, Professor Lupin tasks you with analyzing the magical perimeter defense grid around Hogwarts. Each ward is represented by a line segment, and pairs of wards can interfere with each other if placed carelessly.
+
+  Your job is to examine the grid and detect these **ward collisions**.
+
+  You are given a list of `N` ward segments (guaranteed to be even), each defined by two endpoints.
+
+  You must only compare **consecutive, non-overlapping pairs**: (0 & 1), (2 & 3), ..., (N−2 & N−1). If a pair **collides**, append `(i + i+1) % 10` to the flag, where `i` is the index of the first ward in the pair.
+
+  The final flag is formed as:
+
+  `1ng3neer2k25{` + `collision digits` + `}`
+
+  > Detect the warding misalignment. Secure the perimeter. Reveal the flag.
+
+  **Input Format:**
+  * The first line contains a single integer `N` — number of ward pairs.
+  * The next `N` lines contain four integers `x1 y1 x2 y2` — the endpoints of each ward.
+
+  **Output Format:**
+  * A single line: the generated flag.
+
+attribution: "Written by [hxuu](https://hxuu.github.io/blog)"
+value: "easy"
+type: standard
+flags:
+  - "1ng3neer2k25{159371597159379}"
+tags:
+  - "easy"
+  - "{{category}}"
+  - "geometry"
+hints:
+  - "cross?"
+state: visible
+version: "1.0"
+
