@@ -115,7 +115,7 @@ function checkGuess () {
     
 		let flag = "Flag is under Fidelius, kiddy. No spell will fetch it." ;
         if (guessString == realRightGuess) {
-            flag="realRightGuess"
+            flag=`1ng3neer2k25{${realRightGuess}}`
         }
 		toastr.options.timeOut = 0;
 		toastr.options.onclick = function() {alert(flag);}

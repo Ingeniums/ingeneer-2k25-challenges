@@ -1,20 +1,21 @@
 name: Protego
 author: 4ym3n
 category: {{category}}
-description: |
-  A mysterious binary waits to be unchained. Can you uncover the secrets it holds by linking the clues?
-value: {{medium}}
-type: standard
 protocol: http
+description: |
+  A cursed scroll forged in binary runes lies bound in the web. Only those skilled in arcane analysis and digital divination may unweave its magic. Dare you disassemble its secrets and break the enchantment?
+  
+value: {{easy}}
+type: standard
 connection_info: "{{url}}"
 flags:
   - {
       type: "static",
-      content: "1ng3neer2k25{ingeneerisgoodyeahmay}",
+      content: "1ng3neer2k25{w45m_15_!n07_50_5c4ryz45p_15_!q07_50_5f4ub}",
     }
 tags:
-  - medium
-  - ELF
+  - web
+  - rev
   - {{category}}
 state: hidden
 version: "0.1"

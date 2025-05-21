@@ -1,5 +1,5 @@
 # sudo docker build -t asd .
-# sudo docker run -d -p 1337:1337 --rm -it asd
+# sudo docker run --read-only -d -p 1337:1337 --rm -it asd
 
 FROM ubuntu:22.04
 
