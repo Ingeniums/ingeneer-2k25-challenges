@@ -174,7 +174,7 @@ def handle_client(conn, addr):
             for i in range(len(d)):
                 sm = d[0][i] + d[1][i] + d[2][i] + d[3][i]
                 pd = d[0][i] * d[1][i] * d[2][i] * d[3][i]
-                if not ((9.81 - sm) < 1e-3 and (9.81 - pd) < 1e-3):
+                if not (abs(9.81 - sm) < 1e-3 and abs(9.81 - pd) < 1e-3):
                     if not send_message(conn, "Incorrect!"):
                         return
                     return

@@ -52,7 +52,7 @@ class Graph:
 N = 3
 K = 0
 #               # at least one know     + no one knows      + no one knows  + those who know step out
-ANNOUNCEMENTS = 1                       + 1                 + K             + 1
+ANNOUNCEMENTS = 1                       + 1 + 1                + K             + 1
 
 
 # Initial setup for the Muddy Children Puzzle.
