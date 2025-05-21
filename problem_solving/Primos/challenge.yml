@@ -8,6 +8,8 @@ description: |
 attribution: "Written by Tarek"
 value: "{{hard}}"
 type: standard
+protocol: tcp
+connection_info: nc {{host}} {{port}}
 flags:
   - 1ng3neer2k25{Harry_P0tter_1n_7h3_MatriX}
 tags:
