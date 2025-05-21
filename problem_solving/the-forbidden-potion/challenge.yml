@@ -14,7 +14,7 @@ description: |
   **Your Task:**
   Find **four distinct positive prices**, each to two decimal places, that satisfy both constraints.
 
-  > *The flag is wrapped in `1ng3neer2k25{a.b.c.d}` where `a`, `b`, `c`, `d` are the four values without extra formatting or padding.*
+  > *The flag is wrapped in `1ng3neer2k25{a_b_c_d}` where `a`, `b`, `c`, `d` are the four values without extra formatting or padding.*
 
 attribution: "Written by [hxuu](https://hxuu.github.io/blog)"
 value: "medium"
