@@ -1,6 +1,7 @@
 
 services:
   {{category}}_{{name}}:
+    read_only: true
     build:
       context: "{{src}}/challenge"
     ports:
