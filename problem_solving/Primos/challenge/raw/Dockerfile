@@ -4,7 +4,7 @@ FROM alpine:3.16
 RUN apk update && apk add --no-cache python3 py3-pip socat bash
 
 # Copy the Python challenge file into the container
-COPY file.py /challenge.py
+COPY challenge.py /challenge.py
 RUN chmod +x /challenge.py
 
 # Expose port 6245
