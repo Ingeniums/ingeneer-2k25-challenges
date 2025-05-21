@@ -1,0 +1,15 @@
+name: "Optimum"
+author: "ihaveabananaandamafraidouseit"
+category: {{category}}
+description: |
+  Harry was working on a spell that gives him information about the deatheaters
+  but it looks like its a bit unoptimzed even for him,
+  Can you make it run ?
+attribution: "Written by Tarek"
+value: "{{hard}}"
+type: standard
+flags:
+  - 1ng3neer2k25{Harry_P0tter_1n_7h3_MatriX}
+tags:
+  - hard
+  - "{{category}}"
