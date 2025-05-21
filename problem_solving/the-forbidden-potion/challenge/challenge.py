@@ -70,21 +70,13 @@ def handle_client(conn, addr):
     try:
         if not send_message(
             conn,
-            'In the renovations of Hogwarts, Dumbledore has decided to add a math class to the curriculum\n He said it was something about "character development for the students" or something.',
+            'Deep within the dungeons of Hogwarts, Professor Snape challenges his most gifted students with a subtle alchemical riddle.',
         ):
             return
         time.sleep(0.5)
         if not send_message(
             conn,
-            f"In old-fashioned style, one day during class, you stumble upon a formula in your textbook, and the book says it has interesting properties\n but it cuts off suddenly.",
-        ):
-            return
-        if not send_message(
-            conn, "Intrigued by this formula, you started studying it."
-        ):
-            return
-        if not send_message(
-            conn, "The formula is as follows: D(n) = D(n - 1) + gcd(n, D(n - 1))\n"
+            f"I'm assuming you came with the correct answer!? Let's see.",
         ):
             return
         time.sleep(1)
