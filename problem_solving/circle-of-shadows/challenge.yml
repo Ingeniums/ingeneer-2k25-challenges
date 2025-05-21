@@ -16,12 +16,7 @@ description: |
 
   No wizard steps forward.
 
-  Professor Lupin repeats himself a second time:
-
-  > "If you are certain that your robe is marked, step forward."
-
-  No one again... He proceeds to repeat himself **k-times**,
-  facing the same answer. The **(k+1)st-time** is different though, and those in doubt finally stepped.
+  He proceeds to repeat himself **k-times**, facing the same answer. The **(k+1)st-time** is different though, and those in doubt finally stepped.
 
   How many wizards are marked?
 
