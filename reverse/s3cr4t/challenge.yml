@@ -1,0 +1,19 @@
+name: secret
+author: 4ym3n
+category: {{category}}
+description: |
+  It is our choices, Harry, that show what we truly are... far more than our abilities 
+value: {{warmup}}
+type: standard
+flags:
+  - {
+      type: "static",
+      content: "1ng3neer2k25{n0T_s3crEt_p4sSwor}",
+    }
+tags:
+  - warmup
+  - 4ym3n
+  - {{category}}
+state: hidden
+version: "0.1"
+attribution: Written by 4ym3n
