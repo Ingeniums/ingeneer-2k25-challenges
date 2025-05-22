@@ -8,7 +8,7 @@ value: {{warmup}}
 type: standard
 connection_info: docker pull ingeniums/ingeneer2k25-capsula-enchanta:latest
 flags:
-    - 1ng3neer2k25{m00nc4lf_sc4l3_r3tr13v3d}
+    - 1ng3neer2k25{f11tw1ck_s3cr3t_c4psule}
 topics:
     - containerization
     - docker
