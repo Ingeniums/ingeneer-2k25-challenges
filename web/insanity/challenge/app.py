@@ -51,7 +51,7 @@ def filter_role_id(val):
             "concat(", "concat_ws(", "group_concat(", "substring(",
 
             # Dangerous operators
-            "@@", "@", "#","||", "+", "%00", "%"
+            "@@", "@", "#","||", "+", "%00", "%"," "
         ]
 
         s = str(val).lower()
