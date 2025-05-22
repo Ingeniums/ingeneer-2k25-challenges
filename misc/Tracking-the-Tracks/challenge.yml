@@ -9,7 +9,7 @@ type: standard
 flags:
     - 1ng3neer2k25{37.273,-79.946}
 tags:
-    - medium
+    - hard
     - {{category}}
     - Osint
     - GeoGuessing
