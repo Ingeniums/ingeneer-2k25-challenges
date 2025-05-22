@@ -11,8 +11,8 @@ description: |
 attribution: Written by [ilyes_haddad_](https://ilyeshaddad.com/)
 value: {{hard}}
 type: standard
-connection_info: {{url}}
 protocol: http
+connection_info: "{{url}}"
 flags:
     - {
         type: "static",
