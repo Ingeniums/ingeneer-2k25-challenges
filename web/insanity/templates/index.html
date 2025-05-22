@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Hogwarts{% endblock %}
+{% block content %}
+<p>Welcome, {{ session['username'] }}! Explore your magical identity.</p>
+<p>Visit the <a href="/dashboard">Dashboard</a> to see your magical classification.</p>
+{% endblock %}

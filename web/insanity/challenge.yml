@@ -1,0 +1,29 @@
+name: "insanity"
+author: "ilyes_haddad_"
+category: web 
+description: |
+  Welcome to the enchanted halls of Hogwarts, young witch or wizard!
+  The castle’s magical portal keeps track of every student’s house and role, but rumor has it the Sorting Hat is hiding a powerful secret deep within its records.
+
+  Your task is to uncover the hidden secret.
+  I will not say much good luck!
+
+attribution: Written by [ilyes_haddad_](https://ilyeshaddad.com/)
+value: {{hard}}
+type: standard
+connection_info: {{url}}
+protocol: http
+flags:
+    - {
+        type: "static",
+        content: "1ng3neer2k25{h0gwarts_sess10n_m4g1c_leak}",
+    }  
+
+tags:
+    - hard
+    - ilyes_haddad_
+    - {{category}}
+
+
+state: hidden
+version: "0.1"

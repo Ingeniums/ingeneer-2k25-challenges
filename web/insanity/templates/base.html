@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>{% block title %}Hogwarts Portal{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            background-color: #1b1b1b;
+            color: #f0e6d2;
+            padding: 20px;
+        }
+
+        header {
+            border-bottom: 2px solid #8a0000;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        h1, h2 {
+            color: #ff9900;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚡ Hogwarts Enrollment Portal</h1>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/dashboard">Your Role</a> |
+            <a href="/wand">Wand Registry</a> |
+            <a href="/sorting-hat">Sorting Hat</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

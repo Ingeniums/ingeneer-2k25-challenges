@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Wand Registry{% endblock %}
+{% block content %}
+<h2>🪄 Register Your Wand</h2>
+<form method="post">
+    Owner: <input name="owner"><br>
+    Wood: <input name="wood"><br>
+    Core: <input name="core"><br>
+    Length: <input name="length"><br>
+    <input type="submit" value="Register Wand">
+</form>
+
+<h3>Registered Wands</h3>
+<ul>
+    {% for wand in wands %}
+    <li>{{ wand.owner }} - {{ wand.wood }} / {{ wand.core }} / {{ wand.length }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

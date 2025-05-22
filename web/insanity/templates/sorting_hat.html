@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Sorting Hat{% endblock %}
+{% block content %}
+<h2>🎩 Get Sorted</h2>
+<form method="post">
+    Your Name: <input name="name">
+    <input type="submit" value="Sort Me!">
+</form>
+
+<h3>Sorted Students</h3>
+<ul>
+    {% for student in students %}
+    <li>{{ student.name }} → {{ student.house }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
