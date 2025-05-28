@@ -107,7 +107,7 @@ From this code, we observe several key vulnerabilities:
 
 ### Elliptic Curve Encryption (elliptic_curve_encrypt)
 - Generates a standard RSA modulus n (512-bit primes p and q). This n will serve as the modulus for the ECC curve
-- An elliptic curve $E: y^2 \equiv x^3 + ax + b \pmod{n}$ is defined
+- An elliptic curve `E: y² ≡ x³ + ax + b (mod n)` is defined
 - A base point `base = curve(flag_val, y)` is set, implying `flag_val` is the x-coordinate of the base point
 - The `result_point = 2 * base` is computed, and its (x, y) coordinates are leaked as `point`
 - This implies `point[0]` is the x-coordinate of 2 * base
@@ -163,17 +163,20 @@ The loop `range(2, 86, 2)` attempts to recover up to 86/2 = 43 bytes of the LSBs
 
 After recovering the known LSBs of P and Q (let's call them `p_known` and `q_known`), we have:
 
-$P = \text{High}_P \cdot 2^k + p_{\text{known}}$
-
-$Q = \text{High}_Q \cdot 2^k + q_{\text{known}}$
+```
+P = High_P * 2^k + p_known
+Q = High_Q * 2^k + q_known
+```
 
 where k is the number of bits known from the LSBs.
 
-We know $N = P \cdot Q$. Substituting the expressions:
+We know `N = P * Q`. Substituting the expressions:
 
-$N = (\text{High}_P \cdot 2^k + p_{\text{known}}) \cdot (\text{High}_Q \cdot 2^k + q_{\text{known}})$
+```
+N = (High_P * 2^k + p_known) * (High_Q * 2^k + q_known)
+```
 
-This is a polynomial in $\text{High}_P$ and $\text{High}_Q$. Since these higher parts are relatively "small" compared to the full primes (after we've recovered a significant portion of the LSBs), we can use Coppersmith's method.
+This is a polynomial in `High_P` and `High_Q`. Since these higher parts are relatively "small" compared to the full primes (after we've recovered a significant portion of the LSBs), we can use Coppersmith's method.
 
 The solver uses the following setup for Coppersmith:
 
@@ -201,37 +204,46 @@ This successfully recovers the full P and Q values.
 
 ### Part 3: Recovering the Flag via Polynomial GCD
 
-The final step is to find the `flag_val`. The challenge hides `flag_val` as a common root of two polynomials defined over $\mathbb{Z}_n$ (where n is the ECC modulus).
+The final step is to find the `flag_val`. The challenge hides `flag_val` as a common root of two polynomials defined over **Z_n** (where n is the ECC modulus).
 
 #### Polynomial from hybrid_encrypt
-We have `pub = pow(flag_val + P, 0x10001, ecc_modulus)`. Let $z = \text{flag\_val}$. Then:
+We have `pub = pow(flag_val + P, 0x10001, ecc_modulus)`. Let `z = flag_val`. Then:
 
-$(z + P)^{0x10001} \equiv \text{pub} \pmod{n}$
+```
+(z + P)^0x10001 ≡ pub (mod n)
+```
 
-So, one polynomial is $f(z) = (z + P)^{0x10001} - \text{pub} \pmod{n}$.
+So, one polynomial is `f(z) = (z + P)^0x10001 - pub (mod n)`.
 
 #### Polynomial from elliptic_curve_encrypt
 We have `base = curve(flag_val, y)` and `result_point = 2 * base`. We are given `point[0]` (the x-coordinate of 2 * base).
 
-The x-coordinate of a point $2(x_1, y_1)$ on an elliptic curve $y^2 = x^3 + ax + b$ is given by the formula:
+The x-coordinate of a point `2(x₁, y₁)` on an elliptic curve `y² = x³ + ax + b` is given by the formula:
 
-$x_2 = \left(\frac{3x_1^2 + a}{2y_1}\right)^2 - 2x_1$
+```
+x₂ = ((3x₁² + a) / (2y₁))² - 2x₁
+```
 
-Let $x_1 = z = \text{flag\_val}$ and $x_2 = \text{point}[0]$. Then:
+Let `x₁ = z = flag_val` and `x₂ = point[0]`. Then:
 
-$\text{point}[0] = \left(\frac{3z^2 + a}{2y}\right)^2 - 2z$
+```
+point[0] = ((3z² + a) / (2y))² - 2z
+```
 
-Rearranging and eliminating y using $y^2 = z^3 + az + b$:
+Rearranging and eliminating y using `y² = z³ + az + b`:
 
-$(2y)^2(\text{point}[0] + 2z) = (3z^2 + a)^2$
-
-$4(z^3 + az + b)(\text{point}[0] + 2z) = (3z^2 + a)^2$
+```
+(2y)²(point[0] + 2z) = (3z² + a)²
+4(z³ + az + b)(point[0] + 2z) = (3z² + a)²
+```
 
 So, the second polynomial is:
 
-$g(z) = (3z^2 + a)^2 - 4(z^3 + az + b)(2z + \text{point}[0]) \pmod{n}$
+```
+g(z) = (3z² + a)² - 4(z³ + az + b)(2z + point[0]) (mod n)
+```
 
-The `flag_val` is the common root of $f(z)$ and $g(z)$. This can be found by computing their polynomial GCD.
+The `flag_val` is the common root of `f(z)` and `g(z)`. This can be found by computing their polynomial GCD.
 
 ```python
 F = Zmod(n) # Modulus for ECC
@@ -259,14 +271,16 @@ The ASCII hex encoding of digits ('0'-'9') ensures that for each byte correspond
 This powerful technique (specifically the theorem by Coppersmith for finding small roots of polynomials modulo N) is essential for factoring `rsa_n`. Once a significant portion of the prime factors is known (either MSBs or LSBs), the remaining unknown bits can be found efficiently by treating them as small roots of a carefully constructed polynomial equation. The efficiency comes from lattice reduction algorithms like LLL.
 
 ### Elliptic Curve Point Doubling and Polynomial Roots
-The x-coordinate of 2P on an elliptic curve ($y^2 = x^3 + ax + b$) is given by:
+The x-coordinate of 2P on an elliptic curve (`y² = x³ + ax + b`) is given by:
 
-$x(2P) = \left(\frac{3x(P)^2 + a}{2y(P)}\right)^2 - 2x(P)$
+```
+x(2P) = ((3x(P)² + a) / (2y(P)))² - 2x(P)
+```
 
-By substituting $x(P) = z$ and $x(2P) = \text{point}[0]$, and using the curve equation to eliminate $y(P)$, we can derive a polynomial in z. If z is the flag, it must be a root of this polynomial.
+By substituting `x(P) = z` and `x(2P) = point[0]`, and using the curve equation to eliminate `y(P)`, we can derive a polynomial in z. If z is the flag, it must be a root of this polynomial.
 
 ### Polynomial GCD for Common Roots
-If a value m is a root of two distinct polynomials $f(x)$ and $g(x)$, then $(x - m)$ must be a factor of both polynomials. This means $(x - m)$ is a common divisor, and thus a factor of $\gcd(f(x), g(x))$. If there's only one common root, $\gcd(f(x), g(x))$ will be a linear polynomial of the form $C(x - m)$, where C is a constant. By normalizing it to a monic polynomial, we get $(x - m)$, and the root m can be easily extracted from its coefficients.
+If a value m is a root of two distinct polynomials `f(x)` and `g(x)`, then `(x - m)` must be a factor of both polynomials. This means `(x - m)` is a common divisor, and thus a factor of `gcd(f(x), g(x))`. If there's only one common root, `gcd(f(x), g(x))` will be a linear polynomial of the form `C(x - m)`, where C is a constant. By normalizing it to a monic polynomial, we get `(x - m)`, and the root m can be easily extracted from its coefficients.
 
 ## Conclusions
 
