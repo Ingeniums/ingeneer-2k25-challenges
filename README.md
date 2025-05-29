@@ -25,18 +25,22 @@ Just verify the flag.
 ```
 
 # Authors
-| Author              | Challenges                                           |
-|---------------------|------------------------------------------------------|
-| tarekeee           | Problem Solving                                      |
-| poysa213          | Web (1 tough)                                         |
-| DahounManel        | Design                                               |
-| Mountasser         | Design                                               |
-| merzouka          | Web(1 easy), DevOps(1 warmup, 1 easy, 2 medium, 1 hard) |
-| LanacerYasser      | Crypto(All)                                          |
-| Ismail-anis-cherrak | Networking(All)                                     |
-| Aymen-drid        | Reverse(All)                                         |
-| Mehloul-Mohamed   | Web(1 warmup, 1 easy, 1 hard, 1 tough), DevOps(1 warmup, 1 easy) |
-| sirmoncef         | Forensics(All), Web(1 easy, 2 medium)                 |
-| MoncifT4F0        | Problem Solving                                      |
+| Authors              |
+|---------------------|
+| tarekeee           |
+| poysa213          |
+| ilyes_haddad_      |
+| DahounManel        |
+| Mountasser         |
+| youness          |
+| LanacerYasser      |
+| Ismail-anis-cherrak |
+| Aymen-drid        |
+| Mehloul-Mohamed   |
+| sirmoncef         |
+| MoncifT4F0        |
+| phues            |
+| hxuu            |
+| T4k1            |
 # Flag
 `1ng3neer2k25{flag}`
